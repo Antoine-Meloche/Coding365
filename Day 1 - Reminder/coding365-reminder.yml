@@ -20,4 +20,4 @@ jobs:
     if: github.event.inputs.reason
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'This workflow was ran for: ${{github.event.inputs.reason}}'
+      - run: echo '${{github.event.inputs.reason}}'
