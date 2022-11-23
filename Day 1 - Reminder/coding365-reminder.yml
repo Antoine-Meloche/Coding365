@@ -1,8 +1,14 @@
-name: coding365-reminder
-run-name: Coding365 Reminder
+name: Coding365 Reminder
 on:
   schedule:
     - cron: '0 19 * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason to run this command'
+        required: true
+        default: 'Running tests'
+
 jobs:
   has-commited:
     runs-on: ubuntu-latest
@@ -10,3 +16,8 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           if git log --since='12am'>/dev/null 2>&1; then echo 'Commit found, congrats! :)'; exit 0; else echo 'No commit found. :( You better hurry up and get it done.'; exit 130; fi
+  reason:
+    if: github.event.inputs.reason
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'This workflow was ran for: ${{github.event.inputs.reason}}'
