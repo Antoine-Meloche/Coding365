@@ -1,0 +1,4 @@
+# Rust
+**/target/
+**/debug/
+**/Cargo.lock
