@@ -8,6 +8,7 @@ use std::{
     io::Write,
     path::{Path, PathBuf},
     process,
+    fs,
 };
 
 extern crate termion;
@@ -292,9 +293,15 @@ fn commit_verify(title: &String, body: &String) -> bool {
 fn push(repo: &Repository) {
     let remote_name = choose_repo(repo);
     let mut remote: Remote = repo.find_remote(&remote_name).unwrap();
-    // let url: &str = remote.pushurl().unwrap();
 
-    let branch_name: &str = "temp";
+    let branch_name_result = fs::read_to_string(repo.path());
+    let branch_name = match branch_name_result {
+        Ok(branch_name) => branch_name.trim().strip_suffix("ref: refs/heads/").unwrap().to_string(),
+        Err(_e) => {
+            println!("{}ERR: No branch was detected{}", color::Fg(color::Red), color::Fg(color::White));
+            process::exit(1);
+        }
+    };
 
     let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch_name, remote_name);
 
