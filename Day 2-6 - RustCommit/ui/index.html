@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RustCommit</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>RustCommit</h1>
+    <div class="container">
+        <button id="repo-sel-btn">Select Repo</button>
+        <span id="path" style="font-style: italic; font-size: .9rem;"></span><br>
+        <select name="branch-select" id="branch-select"></select><br>
+        <button id="stage-changes-btn">Stage all changes</button><br>
+        <input type="text" placeholder="Commit title" id="commit-title"><br>
+        <textarea placeholder="Commit Body" id="commit-body"></textarea><br>
+        <button id="commit-btn">Commit</button><br>
+        <select name="remotes-select" id="remotes-select"></select><br>
+        <button id="push-btn">Push</button>
+    </div>
+</body>
+
+<script defer>
+    const { invoke } = window.__TAURI__.tauri;
+
+    let repoPath = "";
+    let repoLoaded = false;
+
+    let repoSelBtn = document.querySelector('#repo-sel-btn');
+    let pathSpan = document.querySelector("#path");
+    repoSelBtn.onclick = () => selectRepoBtn();
+
+    async function selectRepoBtn() {
+        window.__TAURI__.dialog.open({ directory: true, multiple: false }).then((path) => {
+            if (path !== null) {
+                pathSpan.innerHTML = path;
+                repoPath = path;
+                invoke('open_repo', { path: path }).then((isRepo) => {
+                    if (isRepo) {
+                        console.log('Repo loaded');
+                        isRepoLoaded = true;
+                        getRemotes();
+                        getBranches();
+                    } else {
+                        console.log('Repo not loaded');
+                    }
+                })
+            }
+        });
+    }
+
+    let branchSelect = document.querySelector('#branch-select');
+
+    function getBranches() {
+        invoke('get_branches').then((branches) => {
+            branches.forEach(branch => {
+                let branchEl = document.createElement('option');
+                branchEl.value = branch;
+                branchEl.innerHTML = branch;
+                branchSelect.appendChild(branchEl);
+            })
+        })
+    }
+
+    let stageChangesBtn = document.querySelector('#stage-changes-btn');
+    stageChangesBtn.onclick = () => {
+        if (repoLoaded) {
+            stageChanges()
+        }
+    };
+
+    function stageChanges() {
+        invoke('stage_all').then((isStaged) => {
+            if (isStaged) {
+                console.log('Changes were staged');
+            } else {
+                console.log('Changes were not staged');
+            }
+        });
+    }
+
+    let commitTitleInput = document.querySelector("#commit-title");
+    let commitBodyInput = document.querySelector("#commit-body");
+    let commitBtn = document.querySelector("#commit-btn");
+    commitBtn.onclick = () => {
+        if (repoLoaded) {
+            commit();
+        }
+    }
+
+    function commit() {
+        invoke('commit', { title: commitTitleInput.value, body: commitBodyInput.value }).then((commitResult) => {
+            if (commitResult == 0) {
+                console.log("Commit was successful");
+            } else if (commitResult == 1) {
+                console.log("Commit was unsuccessful: No config found")
+            }
+        })
+    }
+
+    let remotesSelect = document.querySelector("#remotes-select");
+
+    function getRemotes() {
+        invoke('get_remotes').then((remotes) => {
+            remotes.forEach(remote => {
+                let remoteEl = document.createElement('option');
+                remoteEl.value = remote;
+                remoteEl.innerHTML = remote;
+                remotesSelect.appendChild(remoteEl);
+            });
+        })
+    }
+
+    let pushBtn = document.querySelector("#push-btn");
+    pushBtn.onclick = () => {
+        if (repoLoaded) {
+            push();
+        }
+    }
+
+    function push() {
+        let remote_name = remotesSelect.value;
+        invoke('push', { remoteName: remote_name }).then((isPushed) => {
+            if (isPushed) {
+                console.log("Successfully pushed to remote");
+            } else {
+                console.log("Unsuccessfully pushed to remote");
+            }
+        })
+    }
+</script>
+
+</html>
