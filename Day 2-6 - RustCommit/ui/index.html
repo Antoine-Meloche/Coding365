@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <h1>RustCommit</h1>
+    <img src="RustCommit-dark.svg" alt="RustCommit logo" id="rustcommit-logo">
     <div class="container">
         <button id="repo-sel-btn">Select Repo</button>
-        <span id="path" style="font-style: italic; font-size: .9rem;"></span><br>
-        <select name="branch-select" id="branch-select"></select><br>
-        <button id="stage-changes-btn">Stage all changes</button><br>
-        <input type="text" placeholder="Commit title" id="commit-title"><br>
-        <textarea placeholder="Commit Body" id="commit-body"></textarea><br>
-        <button id="commit-btn">Commit</button><br>
-        <select name="remotes-select" id="remotes-select"></select><br>
+        <span id="path" style="font-style: italic; font-size: .9rem;"></span>
+        <span class="custom-dropdown">
+            <select name="branch-select" id="branch-select" class="custom-dropdown__select"></select>
+        </span>
+        <button id="stage-changes-btn">Stage all changes</button>
+        <input type="text" placeholder="Commit title" id="commit-title">
+        <textarea placeholder="Commit Body" id="commit-body"></textarea>
+        <button id="commit-btn">Commit</button>
+        <span class="custom-dropdown">
+            <select name="remotes-select" id="remotes-select" class="custom-dropdown__select"></select>
+        </span>
         <button id="push-btn">Push</button>
     </div>
 </body>
