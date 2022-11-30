@@ -1,75 +1,131 @@
 * {
-    background-color: #282A36;
-    color: #F8F8F2;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: bold;
-    /* outline: thin white solid; */
+  background-color: #282a36;
+  color: #f8f8f2;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  /* outline: thin white solid; */
+}
+
+#rustcommit-logo {
+    position: fixed;
+    height: 5rem;
+    margin: 1rem;
 }
 
 .container {
-    padding: 2rem;
-    width: calc(100% - 4rem);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .container > * {
-    width: 30vw;
+  width: 30vw;
 }
 
 button {
-    border: 2px solid transparent;
-    border-radius: 999rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #BD93F9;
-    font-weight: bolder;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 2px solid transparent;
+  border-radius: 999rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #bd93f9;
+  font-weight: bolder;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 button:focus {
-    border: 2px solid white;
-    animation: 0.25s click ease-in-out;
+  border: 2px solid white;
+  animation: 0.25s click ease-in-out;
 }
 
 @keyframes click {
-    15% {
-        background-color: #44475A;        
-    }
-    75% {
-        background-color: #44475A;
-    }
-    from, to {
-        background-color: #BD93F9;
-    }
+  15% {
+    background-color: #44475a;
+  }
+  75% {
+    background-color: #44475a;
+  }
+  from,
+  to {
+    background-color: #bd93f9;
+  }
 }
 
 input {
-    border: none;
-    background-color: #44475A;
-    padding: 1rem;
-    border-radius: 999rem;
+  border: none;
+  background-color: #44475a;
+  padding: 1rem;
+  border-radius: 999rem;
 }
 
 textarea {
-    border: none;
-    background-color: #44475A;
+  border: none;
+  background-color: #44475a;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  height: 30vh;
+  resize: none;
+}
+
+#path {
+  text-align: center;
+  height: 0.9rem;
+}
+
+.custom-dropdown__select {
+  width: 100%;
+  font-size: inherit;
+  padding: 0.5em;
+  margin: 0;
+  background-color: #44475A;
+  color: #F8F8F2;
+}
+
+@supports (pointer-events: none) and (appearance: none) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .custom-dropdown__select {
     padding: 1rem;
-    border-radius: 1.5rem;
-    height: 30vh;
-    resize: none;
-}
+    padding-right: 2.5em;
+    border: 0;
+    border-radius: 999rem;
+    appearance: none;
+  }
 
-span {
-    text-align: center;
-    height: 0.9rem;
-}
+  .custom-dropdown::before,
+  .custom-dropdown::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
 
-select {
-    color: black;
+  .custom-dropdown::after {
+    content: "\23F7";
+    height: 1em;
+    font-size: 0.625em;
+    line-height: 1;
+    right: 1.5rem;
+    top: 50%;
+    margin-top: -0.5em;
+    color: #F8F8F2;
+  }
+
+  .custom-dropdown::before {
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 999rem 999rem 0;
+    background-color: #44475A;
+  }
 }
