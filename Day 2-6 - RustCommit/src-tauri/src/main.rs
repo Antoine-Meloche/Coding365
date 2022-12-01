@@ -15,6 +15,8 @@ use git2::Tree;
 use git2::Branches;
 use git2::BranchType;
 
+use tauri::{Menu, Submenu, CustomMenuItem};
+
 static mut REPOSITORY: Option<Repository> = None;
 
 fn main() {
@@ -25,8 +27,12 @@ fn main() {
             commit,
             get_remotes,
             push,
-            get_branches
+            get_branches,
         ])
+        .menu(Menu::new().add_submenu(Submenu::new("File", Menu::new()
+            .add_item(CustomMenuItem::new("close", "Close").accelerator("cmdOrControl+Q"))
+            .add_item(CustomMenuItem::new("settings", "Settings").accelerator("cmdOrControl+,"))))
+        )
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
