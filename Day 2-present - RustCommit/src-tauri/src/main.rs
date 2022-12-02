@@ -4,6 +4,8 @@
 )]
 
 use git2::string_array::StringArray;
+use git2::BranchType;
+use git2::Branches;
 use git2::Commit;
 use git2::Error;
 use git2::PushOptions;
@@ -12,12 +14,14 @@ use git2::Remote;
 use git2::Repository;
 use git2::Signature;
 use git2::Tree;
-use git2::Branches;
-use git2::BranchType;
 
-use tauri::{Menu, Submenu, CustomMenuItem};
+use tauri::{AboutMetadata, CustomMenuItem, Menu, MenuItem, Submenu};
+
+use once_cell::sync::Lazy;
 
 static mut REPOSITORY: Option<Repository> = None;
+
+static VERSION: Lazy<String> = Lazy::new(|| String::from("0.1.0"));
 
 fn main() {
     tauri::Builder::default()
@@ -29,9 +33,50 @@ fn main() {
             push,
             get_branches,
         ])
-        .menu(Menu::new().add_submenu(Submenu::new("File", Menu::new()
-            .add_item(CustomMenuItem::new("close", "Close").accelerator("cmdOrControl+Q"))
-            .add_item(CustomMenuItem::new("settings", "Settings").accelerator("cmdOrControl+,"))))
+        .menu(
+            Menu::new()
+                .add_submenu(Submenu::new(
+                    "File",
+                    Menu::new()
+                        .add_item(
+                            CustomMenuItem::new("settings", "Settings")
+                                .accelerator("cmdOrControl+,"),
+                        )
+                        .add_native_item(MenuItem::Separator)
+                        .add_native_item(MenuItem::Quit),
+                ))
+                .add_submenu(Submenu::new(
+                    "Git",
+                    Menu::new()
+                        .add_item(CustomMenuItem::new("open_repo", "Open Repo"))
+                        .add_item(CustomMenuItem::new(
+                            "default_branch",
+                            "Select Default Branch",
+                        ))
+                        .add_item(CustomMenuItem::new("stage", "Stage Changes"))
+                        .add_item(CustomMenuItem::new("commit", "Commit"))
+                        .add_item(CustomMenuItem::new(
+                            "default_remote",
+                            "Select Default Remote",
+                        ))
+                        .add_item(CustomMenuItem::new("push", "Push to remote")),
+                ))
+                .add_submenu(Submenu::new(
+                    "About",
+                    Menu::new()
+                        .add_native_item(MenuItem::About(
+                            String::from("RustCommit"),
+                            AboutMetadata::new()
+                                .version(&*VERSION)
+                                .authors(vec![String::from("Antoine Meloche")])
+                                .copyright(String::from("Copyright 2022 © Antoine Meloche"))
+                                .license(String::from("GPL-v3"))
+                                .website(String::from(
+                                    "https://github.com/Antoine-Meloche/Coding365",
+                                ))
+                                .website_label(String::from("Source Code")),
+                        )),
+                )),
         )
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
@@ -176,7 +221,10 @@ fn get_branches() -> Vec<String> {
 
     let branches;
     unsafe {
-        let branches_result: Result<Branches, Error> = REPOSITORY.as_mut().unwrap().branches(Some(BranchType::Local));
+        let branches_result: Result<Branches, Error> = REPOSITORY
+            .as_mut()
+            .unwrap()
+            .branches(Some(BranchType::Local));
         branches = match branches_result {
             Ok(branches) => branches,
             Err(_e) => {
