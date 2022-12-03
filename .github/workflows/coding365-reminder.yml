@@ -11,6 +11,8 @@ on:
 
 jobs:
   has-commited:
+    name: Has a commit been pushed in the past 24 hours
+    runs-on: latest-ubuntu
     steps:
       - uses: actions/checkout@v3
       - uses: szenius/set-timezone@v1.0
