@@ -33,6 +33,18 @@
 <script defer>
     // start background
 
+    const handleMouseMove = (e) => {
+        const { currentTarget: target } = e;
+
+        const rect = target.getBoundingClientRect()
+        const clientX = e.clientX - rect.left;
+        const clientY = e.clientY - rect.top;
+
+        document.body.style = `--mouse-x: ${clientX};--mouse-y: ${clientY}`;
+    }
+
+    document.body.onmousemove = (e) => handleMouseMove(e);
+
     const tileContainer = document.querySelector('.tiles');
 
     const size = 50;
@@ -45,6 +57,7 @@
         rows = Math.floor(window.innerHeight / size);
         tiles = Array.from(Array(columns * rows));
 
+        tileContainer.style = `--columns: ${columns};--rows: ${rows}`;
         for (var i=0; i<tiles.length;i++) {
             const tile = document.createElement('div');
             tile.classList.add('tile');
