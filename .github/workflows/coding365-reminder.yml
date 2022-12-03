@@ -21,6 +21,7 @@ jobs:
       - run: |
           if git log --since='12am'>/dev/null 2>&1; then echo 'Commit found, congrats! :)'; exit 0; else echo 'No commit found. :( You better hurry up and get it done.'; exit 130; fi
   reason:
+    name: Reason for Manual Run
     if: github.event.inputs.reason
     runs-on: ubuntu-latest
     steps:
