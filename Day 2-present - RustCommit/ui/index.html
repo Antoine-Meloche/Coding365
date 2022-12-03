@@ -26,9 +26,49 @@
         </span>
         <button id="push-btn">Push</button>
     </div>
+
+    <div class="tiles"></div>
 </body>
 
 <script defer>
+    // start background
+
+    const handleMouseMove = (e) => {
+        const { currentTarget: target } = e;
+
+        const rect = target.getBoundingClientRect()
+        const clientX = e.clientX - rect.left;
+        const clientY = e.clientY - rect.top;
+
+        document.body.style = `--mouse-x: ${clientX};--mouse-y: ${clientY}`;
+    }
+
+    document.body.onmousemove = (e) => handleMouseMove(e);
+
+    const tileContainer = document.querySelector('.tiles');
+
+    const size = 50;
+    let columns = Math.floor(document.body.clientWidth / size);
+    let rows = Math.floor(document.body.clientHeight / size);
+    let tiles = Array.from(Array(columns * rows));
+
+    const createGrid = () => {
+        columns = Math.floor(window.innerWidth / size);
+        rows = Math.floor(window.innerHeight / size);
+        tiles = Array.from(Array(columns * rows));
+
+        tileContainer.style = `--columns: ${columns};--rows: ${rows}`;
+        for (var i=0; i<tiles.length;i++) {
+            const tile = document.createElement('div');
+            tile.classList.add('tile');
+            tileContainer.appendChild(tile);
+        }
+    };
+    createGrid();
+    window.onresize = () => createGrid();
+
+    // end background
+
     const { invoke } = window.__TAURI__.tauri;
 
     let repoPath = "";

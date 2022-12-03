@@ -1,5 +1,5 @@
 * {
-  background-color: #282a36;
+  /* background-color: #282a36; */
   color: #f8f8f2;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -7,10 +7,37 @@
   /* outline: thin white solid; */
 }
 
+body {
+  background-color: #44475a;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+body:hover::before {
+  opacity: 1;
+}
+body::before {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+  background: radial-gradient(
+    50vw circle at var(--mouse-x) var(--mouse-y),
+    #f8f8f2,
+    transparent 40%
+  );
+}
+
 #rustcommit-logo {
-    position: fixed;
-    height: 5rem;
-    margin: 1rem;
+  position: fixed;
+  height: 5rem;
+  margin: 1rem;
 }
 
 .container {
@@ -83,8 +110,8 @@ textarea {
   font-size: inherit;
   padding: 0.5em;
   margin: 0;
-  background-color: #44475A;
-  color: #F8F8F2;
+  background-color: #44475a;
+  color: #f8f8f2;
 }
 
 @supports (pointer-events: none) and (appearance: none) {
@@ -117,7 +144,7 @@ textarea {
     right: 1.5rem;
     top: 50%;
     margin-top: -0.5em;
-    color: #F8F8F2;
+    color: #f8f8f2;
   }
 
   .custom-dropdown::before {
@@ -126,6 +153,31 @@ textarea {
     top: 0;
     bottom: 0;
     border-radius: 0 999rem 999rem 0;
-    background-color: #44475A;
+    background-color: #44475a;
   }
+}
+
+.tiles {
+  height: calc(100vh - 1px);
+  width: calc(100vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  opacity: 1;
+}
+
+.tile {
+  position: relative;
+  opacity: 1;
+}
+
+.tile::before {
+  content: "";
+  inset: 0.5px;
+  position: absolute;
+  background-color: #282a36;
 }
