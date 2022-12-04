@@ -18,6 +18,17 @@
             <select name="branch-select" id="branch-select" class="custom-dropdown__select"></select>
         </span>
         <button id="stage-changes-btn">Stage all changes</button>
+        <span class="custom-dropdown">
+            <select name="type-select" id="type-select" class="custom-dropdown__select">
+                <option value="BUGFIX:">BUGFIX: fixed a bug</option>
+                <option value="FEAT:">FEAT: added a feature</option>
+                <option value="REFAC:">code refactoring</option>
+                <option value="DOCS:">change to documentation only</option>
+                <option value="STYLE:">change to styling only</option>
+                <option value="TEST:">change to tests only</option>
+                <option value="">No prefix</option>
+            </select>
+        </span>
         <input type="text" placeholder="Commit title" id="commit-title">
         <textarea placeholder="Commit Body" id="commit-body"></textarea>
         <button id="commit-btn">Commit</button>
@@ -74,7 +85,7 @@
                 invoke('open_repo', { path: path }).then((isRepo) => {
                     if (isRepo) {
                         console.log('Repo loaded');
-                        isRepoLoaded = true;
+                        repoLoaded = true;
                         getRemotes();
                         getBranches();
                     } else {
@@ -115,6 +126,7 @@
         });
     }
 
+    let commitTypeInput = document.querySelector('#type-select');
     let commitTitleInput = document.querySelector("#commit-title");
     let commitBodyInput = document.querySelector("#commit-body");
     let commitBtn = document.querySelector("#commit-btn");
@@ -125,7 +137,7 @@
     }
 
     function commit() {
-        invoke('commit', { title: commitTitleInput.value, body: commitBodyInput.value }).then((commitResult) => {
+        invoke('commit', { title: commitTypeInput.value+' '+commitTitleInput.value, body: commitBodyInput.value }).then((commitResult) => {
             if (commitResult == 0) {
                 console.log("Commit was successful");
             } else if (commitResult == 1) {
