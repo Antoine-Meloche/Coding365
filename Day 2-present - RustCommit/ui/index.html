@@ -109,6 +109,16 @@
         })
     }
 
+    branchSelect.onchange = () => {
+        invoke('checkout', { branchName: branchSelect.value }).then((isCheckedOut) => {
+            if (isCheckedOut) {
+                console.log(`Successfully moved to ${branchSelect.value}`);
+            } else {
+                console.log(`Was not able to move to ${branchSelect.value}`);
+            }
+        })
+    }
+
     let stageChangesBtn = document.querySelector('#stage-changes-btn');
     stageChangesBtn.onclick = () => {
         if (repoLoaded) {
@@ -168,7 +178,8 @@
 
     function push() {
         let remote_name = remotesSelect.value;
-        invoke('push', { remoteName: remote_name }).then((isPushed) => {
+        let branch_name = branchSelect.value;
+        invoke('push', { remoteName: remote_namem, branchName: branch_name }).then((isPushed) => {
             if (isPushed) {
                 console.log("Successfully pushed to remote");
             } else {

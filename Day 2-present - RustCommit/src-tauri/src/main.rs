@@ -282,7 +282,7 @@ fn get_remotes() -> Vec<String> {
 }
 
 #[tauri::command]
-fn push(remote_name: &str) -> bool {
+fn push(remote_name: &str, branch_name: &str) -> bool {
     let mut remote: Remote;
     unsafe {
         remote = REPOSITORY
@@ -292,7 +292,17 @@ fn push(remote_name: &str) -> bool {
             .unwrap();
     }
 
-    let branch_name: &str = "day-5"; // temporary will be replaced with similar solution to cli
+    unsafe {
+        let upstream_branch_result = REPOSITORY.branch_upstream_name(branch_name);
+        match upstream_branch_result {
+            Ok(upstream_branch_name) => {
+                branch_name = upstream_branch_name.as_str().unwrap();
+            },
+            Err(_) => {
+                Branch::wrap(resolve_reference_from_short_name(branch_name)).set_upstream(Some(branch_name));
+            }
+        }
+    }
 
     let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch_name, remote_name);
 
@@ -305,4 +315,20 @@ fn push(remote_name: &str) -> bool {
             return false;
         }
     };
+}
+
+#[derive(Default)]
+fn checkout(branch_name: &str) -> bool {
+    unsafe {
+        let (object, reference) = REPOSITORY.revparse_ext(branch_name).expect("Object not found");
+        
+        REPOSITORY.checkout_tree(&object, None)
+            .expect("Failed to checkout");
+    
+        match reference {
+            Some(gref) => REPOSITORY.set_head(gref.name().unwrap()),
+            None => REPOSITORY.set_head_detached(object.id()),
+        }
+        .expect("Failed to set HEAD");
+    }
 }
