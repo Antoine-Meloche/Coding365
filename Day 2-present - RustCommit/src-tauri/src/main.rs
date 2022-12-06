@@ -6,6 +6,7 @@
 use git2::string_array::StringArray;
 use git2::BranchType;
 use git2::Branches;
+use git2::Branch;
 use git2::Commit;
 use git2::Error;
 use git2::PushOptions;
@@ -32,6 +33,7 @@ fn main() {
             get_remotes,
             push,
             get_branches,
+            checkout
         ])
         .menu(
             Menu::new()
@@ -292,19 +294,24 @@ fn push(remote_name: &str, branch_name: &str) -> bool {
             .unwrap();
     }
 
+    let branch: &str;
+
     unsafe {
-        let upstream_branch_result = REPOSITORY.branch_upstream_name(branch_name);
+        let upstream_branch_result = REPOSITORY.as_mut().unwrap().branch_upstream_name(branch_name);
         match upstream_branch_result {
-            Ok(upstream_branch_name) => {
-                branch_name = upstream_branch_name.as_str().unwrap();
+            Ok(_upstream_branch_name) => {
+                // No need for change
+                branch = branch_name
             },
             Err(_) => {
-                Branch::wrap(resolve_reference_from_short_name(branch_name)).set_upstream(Some(branch_name));
+                // No upstream branch
+                Branch::wrap(REPOSITORY.as_mut().unwrap().resolve_reference_from_short_name(branch_name).unwrap()).set_upstream(Some(branch_name)).unwrap();
+                branch = branch_name
             }
         }
     }
 
-    let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch_name, remote_name);
+    let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch, remote_name);
 
     let remote_result = remote.push(&[refspec], Some(&mut PushOptions::default()));
     match remote_result {
@@ -317,18 +324,20 @@ fn push(remote_name: &str, branch_name: &str) -> bool {
     };
 }
 
-#[derive(Default)]
+#[tauri::command]
 fn checkout(branch_name: &str) -> bool {
     unsafe {
-        let (object, reference) = REPOSITORY.revparse_ext(branch_name).expect("Object not found");
+        let (object, reference) = REPOSITORY.as_mut().unwrap().revparse_ext(branch_name).expect("Object not found");
         
-        REPOSITORY.checkout_tree(&object, None)
+        REPOSITORY.as_mut().unwrap().checkout_tree(&object, None)
             .expect("Failed to checkout");
     
-        match reference {
-            Some(gref) => REPOSITORY.set_head(gref.name().unwrap()),
-            None => REPOSITORY.set_head_detached(object.id()),
-        }
-        .expect("Failed to set HEAD");
-    }
+        match match reference {
+            Some(gref) => REPOSITORY.as_mut().unwrap().set_head(gref.name().unwrap()),
+            None => REPOSITORY.as_mut().unwrap().set_head_detached(object.id()),
+        } {
+            Ok(..) => return true,
+            Err(..) => return false
+        };
+    };
 }
