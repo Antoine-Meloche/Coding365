@@ -6,6 +6,7 @@
 use git2::string_array::StringArray;
 use git2::BranchType;
 use git2::Branches;
+use git2::Branch;
 use git2::Commit;
 use git2::Error;
 use git2::PushOptions;
@@ -32,6 +33,7 @@ fn main() {
             get_remotes,
             push,
             get_branches,
+            checkout
         ])
         .menu(
             Menu::new()
@@ -282,7 +284,7 @@ fn get_remotes() -> Vec<String> {
 }
 
 #[tauri::command]
-fn push(remote_name: &str) -> bool {
+fn push(remote_name: &str, branch_name: &str) -> bool {
     let mut remote: Remote;
     unsafe {
         remote = REPOSITORY
@@ -292,9 +294,24 @@ fn push(remote_name: &str) -> bool {
             .unwrap();
     }
 
-    let branch_name: &str = "day-5"; // temporary will be replaced with similar solution to cli
+    let branch: &str;
 
-    let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch_name, remote_name);
+    unsafe {
+        let upstream_branch_result = REPOSITORY.as_mut().unwrap().branch_upstream_name(branch_name);
+        match upstream_branch_result {
+            Ok(_upstream_branch_name) => {
+                // No need for change
+                branch = branch_name
+            },
+            Err(_) => {
+                // No upstream branch
+                Branch::wrap(REPOSITORY.as_mut().unwrap().resolve_reference_from_short_name(branch_name).unwrap()).set_upstream(Some(branch_name)).unwrap();
+                branch = branch_name
+            }
+        }
+    }
+
+    let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch, remote_name);
 
     let remote_result = remote.push(&[refspec], Some(&mut PushOptions::default()));
     match remote_result {
@@ -304,5 +321,23 @@ fn push(remote_name: &str) -> bool {
         Err(_e) => {
             return false;
         }
+    };
+}
+
+#[tauri::command]
+fn checkout(branch_name: &str) -> bool {
+    unsafe {
+        let (object, reference) = REPOSITORY.as_mut().unwrap().revparse_ext(branch_name).expect("Object not found");
+        
+        REPOSITORY.as_mut().unwrap().checkout_tree(&object, None)
+            .expect("Failed to checkout");
+    
+        match match reference {
+            Some(gref) => REPOSITORY.as_mut().unwrap().set_head(gref.name().unwrap()),
+            None => REPOSITORY.as_mut().unwrap().set_head_detached(object.id()),
+        } {
+            Ok(..) => return true,
+            Err(..) => return false
+        };
     };
 }
