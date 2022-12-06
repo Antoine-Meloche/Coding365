@@ -179,7 +179,7 @@
     function push() {
         let remote_name = remotesSelect.value;
         let branch_name = branchSelect.value;
-        invoke('push', { remoteName: remote_namem, branchName: branch_name }).then((isPushed) => {
+        invoke('push', { remoteName: remote_name, branchName: branch_name }).then((isPushed) => {
             if (isPushed) {
                 console.log("Successfully pushed to remote");
             } else {
