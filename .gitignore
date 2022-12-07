@@ -2,3 +2,6 @@
 **/target/
 **/debug/
 **/Cargo.lock
+
+# Tokens
+**/*.token
