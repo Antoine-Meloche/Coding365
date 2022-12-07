@@ -294,6 +294,9 @@ fn push(remote_name: &str, branch_name: &str) -> bool {
             .unwrap();
     }
 
+    let mut callbacks = git2::RemoteCallbacks::new();
+    callbacks.credentials(git_credentials_callback);
+
     let branch: &str;
 
     unsafe {
@@ -340,4 +343,20 @@ fn checkout(branch_name: &str) -> bool {
             Err(..) => return false
         };
     };
+}
+
+fn git_credentials_callback(
+    _url: &str,
+    user_from_url: Option<&str>,
+    cred_types_allowed: git2::CredentialType,
+) -> Result<git2::Cred, git2::Error> {
+    let user = user_from_url.unwrap();
+
+    if cred_types_allowed.contains(git2::CredentialType::SSH_KEY) {
+        let private_key = dirs::home_dir().unwrap().join(".ssh").join("id_rsa");
+        let cred = git2::Cred::ssh_key(user, None, &private_key, None);
+        return cred;
+    }
+
+    return Err(git2::Error::from_str("no credential option available"));
 }
