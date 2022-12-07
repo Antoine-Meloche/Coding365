@@ -316,12 +316,13 @@ fn push(remote_name: &str, branch_name: &str) -> bool {
 
     let refspec: String = format!("+refs/heads/{}:refs/remotes/{}", branch, remote_name);
 
-    let remote_result = remote.push(&[refspec], Some(&mut PushOptions::default()));
+    let remote_result = remote.push(&[refspec], Some(&mut PushOptions::new().remote_callbacks(callbacks)));
     match remote_result {
         Ok(_remote) => {
             return true;
         }
         Err(_e) => {
+            println!("{}", _e);
             return false;
         }
     };
@@ -346,13 +347,23 @@ fn checkout(branch_name: &str) -> bool {
 }
 
 fn git_credentials_callback(
-    _url: &str,
-    user_from_url: Option<&str>,
-    cred_types_allowed: git2::CredentialType,
+    _user: &str,
+    _user_from_url: Option<&str>,
+    _cred: git2::CredentialType,
 ) -> Result<git2::Cred, git2::Error> {
-    let user = user_from_url.unwrap();
+    let config_result = git2::Config::open_default();
+    let config = match config_result {
+        Ok(config) => config,
+        Err(_) => return Err(git2::Error::from_str("no git config available")),
+    };
 
-    if cred_types_allowed.contains(git2::CredentialType::SSH_KEY) {
+    let user = &config.get_string("user.name").unwrap()[..];
+
+    if _cred.contains(git2::CredentialType::USERNAME) {
+        return git2::Cred::username(user);
+    }
+
+    if _cred.contains(git2::CredentialType::SSH_KEY) {
         let private_key = dirs::home_dir().unwrap().join(".ssh").join("id_rsa");
         let cred = git2::Cred::ssh_key(user, None, &private_key, None);
         return cred;
@@ -360,3 +371,4 @@ fn git_credentials_callback(
 
     return Err(git2::Error::from_str("no credential option available"));
 }
+    
