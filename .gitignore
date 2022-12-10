@@ -3,5 +3,8 @@
 **/debug/
 **/Cargo.lock
 
+# Python
+**/__pycache__
+
 # Tokens
 **/*.token
