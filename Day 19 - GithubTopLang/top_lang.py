@@ -64,7 +64,7 @@ def generate_svg():
         <style>
           .header {{
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #ff6e96;
+            fill: #bd93f9;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }}
           @supports(-moz-appearance: auto) {{
@@ -95,51 +95,24 @@ def generate_svg():
                 * {{ animation-duration: 0s !important; animation-delay: 0s !important; }}
         </style>
         <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="100%" stroke="#e4e2e2" width="495px" fill="#282a36" stroke-opacity="1"/>
-            <g data-testid="card-title" transform="translate(25, 35)">
-                <g transform="translate(0, 0)">
-            <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
+        <g data-testid="card-title" transform="translate(25, 35)">
+            <g transform="translate(0, 0)">
+                <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
             </g>
-            </g>
-            
+        </g>    
 
-                <g data-testid="main-card-body" transform="translate(0, 55)">
+        <g data-testid="main-card-body" transform="translate(0, 55)">
                 
             <svg data-testid="lang-items" x="25">
             
-            <mask id="rect-mask">
-            <rect x="0" y="0" width="445" height="8" fill="white" rx="5"/>
-            </mask>
+                <mask id="rect-mask">
+                    <rect x="0" y="0" width="445" height="8" fill="white" rx="5"/>
+                </mask>
                 {language_bar(languages=languages)}
                 {language_list(languages=languages)}
-        
-        <g transform="translate(0, 50)">
-            <g>
-            <circle cx="5" cy="6" r="5" fill="#3178c6"/>
-            <text data-testid="lang-name" x="15" y="10" class="lang-name">
-                TypeScript 9.35%
-            </text>
-            </g>
-        </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
-            <g>
-            <circle cx="5" cy="6" r="5" fill="#563d7c"/>
-            <text data-testid="lang-name" x="15" y="10" class="lang-name">
-                CSS 3.26%
-            </text>
-            </g>
-        </g><g transform="translate(0, 25)">
-            <g>
-            <circle cx="5" cy="6" r="5" fill="#5686a5"/>
-            <text data-testid="lang-name" x="15" y="10" class="lang-name">
-                GLSL 0.42%
-            </text>
-            </g>
-        </g></g>
-            </g>
-        
             </svg>
-        
-                </g>
-      </svg>
+        </g>
+    </svg>
     ''', mimetype="image/svg+xml"), 200
 
 def language_bar(languages: dict):
@@ -153,9 +126,19 @@ def language_bar(languages: dict):
 
 def language_list(languages: dict):
     list = ""
+    y = 25
+    x = 0
 
-    for language in languages:
-        list += f"<g transform=\"translate(0, 25)\"><g><circle cx=\"5\" cy=\"6\" r=\"5\" fill=\"{languages[language]['color']}\"/><text data-testid=\"lang-name\" x=\"15\" y=\"10\" class=\"lang-name\">{language} {languages[language]['width'] / 4.45}%</text></g></g>"
+    for i, language in enumerate(languages):
+        list += f"<g transform=\"translate({x}, {y})\"><g><circle cx=\"5\" cy=\"6\" r=\"5\" fill=\"{languages[language]['color']}\"/><text data-testid=\"lang-name\" x=\"15\" y=\"10\" class=\"lang-name\">{language} {round(languages[language]['width'] / 4.45, ndigits=1)}%</text></g></g>"
+        y += 30
+        if i in [3, 7, 11]:
+            y = 25
+            x += 125
+        if i == 15:
+            break
+    
+    return list
 
 if __name__ == "__main__":
     app.run()
