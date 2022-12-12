@@ -8,3 +8,6 @@
 
 # Tokens
 **/*.token
+
+# VSCode
+.vscode/
