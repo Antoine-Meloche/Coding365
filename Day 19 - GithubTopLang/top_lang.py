@@ -58,7 +58,7 @@ def generate_svg():
         languages[language]['width'] = languages[language]['size'] / total_size * 445
 
     return flask.Response(f'''
-    <svg xmlns="http://www.w3.org/2000/svg" width="495px" height="195px" viewBox="0 0 495 195" fill="none" role="img" aria-labelledby="descId">
+    <svg xmlns="http://www.w3.org/2000/svg" width="495px" height="195px" viewBox="0 0 496 195" fill="none" role="img" aria-labelledby="descId">
         <title id="titleId"/>
         <desc id="descId"/>
         <style>
@@ -94,7 +94,7 @@ def generate_svg():
         
                 * {{ animation-duration: 0s !important; animation-delay: 0s !important; }}
         </style>
-        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="100%" stroke="#e4e2e2" width="495px" fill="#282a36" stroke-opacity="1"/>
+        <rect data-testid="card-bg" x="0" y="0" rx="4.5" height="100%" stroke="#6272A4" width="495px" fill="#282a36" stroke-opacity="1"/>
         <g data-testid="card-title" transform="translate(25, 35)">
             <g transform="translate(0, 0)">
                 <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
