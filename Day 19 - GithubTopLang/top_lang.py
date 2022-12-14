@@ -57,7 +57,7 @@ def generate_svg():
     for language in languages:
         languages[language]['width'] = languages[language]['size'] / total_size * 445
 
-    return flask.Response(f'''
+    response = flask.Response(f'''
     <svg xmlns="http://www.w3.org/2000/svg" width="495px" height="195px" viewBox="0 0 496 195" fill="none" role="img" aria-labelledby="descId">
         <title id="titleId"/>
         <desc id="descId"/>
@@ -113,7 +113,10 @@ def generate_svg():
             </svg>
         </g>
     </svg>
-    ''', mimetype="image/svg+xml"), 200
+    ''', mimetype="image/svg+xml")
+    response.headers['Cache-Control'] = 'max-age=2592000'
+
+    return response, 200
 
 def language_bar(languages: dict):
     bar = ""
