@@ -112,7 +112,7 @@ def generate_svg():
                     no_streak = True
 
 
-    return flask.Response(f'''
+    response = flask.Response(f'''
         <svg
                 style="isolation: isolate"
                 viewBox="0 0 495 195"
@@ -425,7 +425,10 @@ def generate_svg():
                 </g>
                 </g>
                 </svg>
-        ''', mimetype='image/svg+xml'), 200
+        ''', mimetype='image/svg+xml')
+    response.headers['Cache-Control'] = 'max-age=2592000'
+
+    return response, 200
 
 
 if __name__ == '__main__':
