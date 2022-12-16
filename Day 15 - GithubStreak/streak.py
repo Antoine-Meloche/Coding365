@@ -239,7 +239,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.7s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.7s;stroke-width:0.8;stroke-dasharray:none"
                         id="text27">Total Contributions</text>
                 </g>
                 <!-- Total Contributions Big Number -->
@@ -258,7 +258,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="28px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.6s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.6s;stroke-width:0.8;stroke-dasharray:none"
                         id="text23">
                                 {total_commits}
                         </text>
@@ -279,7 +279,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.8s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.8s;stroke-width:0.8;stroke-dasharray:none"
                         id="text31">
                                 {first_contribution} - Present
                         </text>
@@ -325,7 +325,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
                         id="text41">Current Streak</text>
                 </g>
                 <!-- Current Streak Range -->
@@ -344,7 +344,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
                         id="text45">
                                 {current_streak_start} - {last_day}
                         </text>
@@ -375,7 +375,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="28px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.2s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.2s;stroke-width:0.8;stroke-dasharray:none"
                         id="text52">
                                 {longest_streak}
                         </text>
@@ -396,7 +396,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.3s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.3s;stroke-width:0.8;stroke-dasharray:none"
                         id="text56">Longest Streak</text>
                 </g>
                 <!-- Longest Streak Range -->
@@ -415,7 +415,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.4s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.4s;stroke-width:0.8;stroke-dasharray:none"
                         id="text60">
                                 {longest_streak_range[0]} - {longest_streak_range[1]}
                         </text>
