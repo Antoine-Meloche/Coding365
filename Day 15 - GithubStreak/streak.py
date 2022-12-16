@@ -146,8 +146,6 @@ def generate_svg():
                 inkscape:window-y="2"
                 inkscape:window-maximized="1"
                 inkscape:current-layer="g50" />
-                <style
-                id="style2">@keyframes currstreak {{0% {{ font-size: 3px; opacity: 0.2; }}80% {{ font-size: 34px; opacity: 1; }}100% {{ font-size: 28px; opacity: 1; }}}}@keyframes fadein {{0% {{ opacity: 0; }}100% {{ opacity: 1; }}}}</style>
                 <defs
                 id="defs11">
                 <clipPath
@@ -426,7 +424,7 @@ def generate_svg():
                 </g>
                 </svg>
         ''', mimetype='image/svg+xml')
-    response.headers['Cache-Control'] = 'max-age=2592000'
+    response.headers['Cache-Control'] = 'max-age=1800000'
 
     return response, 200
 
