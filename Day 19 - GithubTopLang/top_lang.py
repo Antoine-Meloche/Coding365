@@ -63,36 +63,14 @@ def generate_svg():
         <desc id="descId"/>
         <style>
           .header {{
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 18px Sans-Serif;
             fill: #bd93f9;
-            animation: fadeInAnimation 0.8s ease-in-out forwards;
           }}
           @supports(-moz-appearance: auto) {{
             /* Selector detects Firefox */
             .header {{ font-size: 15.5px; }}
           }}
-          .lang-name {{ font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f8f8f2 }}
-
-                
-            /* Animations */
-            @keyframes scaleInAnimation {{
-            from {{
-                transform: translate(-5px, 5px) scale(0);
-            }}
-            to {{
-                transform: translate(-5px, 5px) scale(1);
-            }}
-            }}
-            @keyframes fadeInAnimation {{
-            from {{
-                opacity: 0;
-            }}
-            to {{
-                opacity: 1;
-            }}
-            }}
-        
-                * {{ animation-duration: 0s !important; animation-delay: 0s !important; }}
+          .lang-name {{ font: 400 11px Sans-Serif; fill: #f8f8f2 }}
         </style>
         <rect data-testid="card-bg" x="0" y="0" rx="4.5" height="100%" stroke="#6272A4" width="495px" fill="#282a36" stroke-opacity="1"/>
         <g data-testid="card-title" transform="translate(25, 35)">
@@ -114,7 +92,7 @@ def generate_svg():
         </g>
     </svg>
     ''', mimetype="image/svg+xml")
-    response.headers['Cache-Control'] = 'max-age=2592000'
+    response.headers['Cache-Control'] = 'max-age=1800000'
 
     return response, 200
 
