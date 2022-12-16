@@ -146,8 +146,6 @@ def generate_svg():
                 inkscape:window-y="2"
                 inkscape:window-maximized="1"
                 inkscape:current-layer="g50" />
-                <style
-                id="style2">@keyframes currstreak {{0% {{ font-size: 3px; opacity: 0.2; }}80% {{ font-size: 34px; opacity: 1; }}100% {{ font-size: 28px; opacity: 1; }}}}@keyframes fadein {{0% {{ opacity: 0; }}100% {{ opacity: 1; }}}}</style>
                 <defs
                 id="defs11">
                 <clipPath
@@ -241,7 +239,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.7s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.7s;stroke-width:0.8;stroke-dasharray:none"
                         id="text27">Total Contributions</text>
                 </g>
                 <!-- Total Contributions Big Number -->
@@ -260,7 +258,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="28px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.6s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.6s;stroke-width:0.8;stroke-dasharray:none"
                         id="text23">
                                 {total_commits}
                         </text>
@@ -281,7 +279,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.8s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.8s;stroke-width:0.8;stroke-dasharray:none"
                         id="text31">
                                 {first_contribution} - Present
                         </text>
@@ -327,7 +325,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
                         id="text41">Current Streak</text>
                 </g>
                 <!-- Current Streak Range -->
@@ -346,7 +344,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 0.9s;stroke-width:0.8;stroke-dasharray:none"
                         id="text45">
                                 {current_streak_start} - {last_day}
                         </text>
@@ -377,7 +375,7 @@ def generate_svg():
                         font-weight="700"
                         font-size="28px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.2s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.2s;stroke-width:0.8;stroke-dasharray:none"
                         id="text52">
                                 {longest_streak}
                         </text>
@@ -398,7 +396,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="14px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.3s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.3s;stroke-width:0.8;stroke-dasharray:none"
                         id="text56">Longest Streak</text>
                 </g>
                 <!-- Longest Streak Range -->
@@ -417,7 +415,7 @@ def generate_svg():
                         font-weight="400"
                         font-size="12px"
                         font-style="normal"
-                        style="opacity:0;animation:fadein 0.5s linear forwards 1.4s;stroke-width:0.8;stroke-dasharray:none"
+                        style="animation:fadein 0.5s linear forwards 1.4s;stroke-width:0.8;stroke-dasharray:none"
                         id="text60">
                                 {longest_streak_range[0]} - {longest_streak_range[1]}
                         </text>
@@ -426,7 +424,7 @@ def generate_svg():
                 </g>
                 </svg>
         ''', mimetype='image/svg+xml')
-    response.headers['Cache-Control'] = 'max-age=2592000'
+    response.headers['Cache-Control'] = 'max-age=1800000'
 
     return response, 200
 
