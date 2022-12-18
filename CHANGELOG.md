@@ -87,3 +87,15 @@
 ## Day 22
 
 *Advent-Of-Code* - Worked on the [Advent of Code](https://adventofcode.com) problems on my [Advent of Code repo](https://github.com/Antoine-Meloche/Advent-of-Code)
+
+## Day 23
+
+*GithubStrea & GithubTopLang* - Fix for animations and max-age
+
+## Day 24
+
+*GithubStreak & RustCommit* - Fixes for GithubStreak and RustCommit as well as RustCommit pre-release v1.0.0 alpha
+
+## Day 25
+
+*Undefined* - Worked on a project that should have it's initial release on monday
