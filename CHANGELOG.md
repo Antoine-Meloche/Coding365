@@ -103,3 +103,7 @@
 ## Day 26
 
 *Undefined* - Worked on a project that should have it's initial release on monday afternoon
+
+## Day 27
+
+*Undefined* - Couldn't quite finish it today releasing tomorrow
