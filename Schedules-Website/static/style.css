@@ -1,0 +1,94 @@
+body {
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+    gap: 1rem;
+}
+
+ul > li {
+    width: 75vw;
+    padding: 1rem;
+    border-bottom: 1px solid #202020;
+    position: relative;
+}
+
+
+.StepFirstColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.StepSecondColumn {
+    opacity: 0;
+    height: 2rem;
+}
+
+.stepstarttime {
+    display: inline;
+    margin: 1rem;
+    width: min-content;
+}
+
+.StepTypeImage {
+    display: inline;
+    width: min-content;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.StepTypeAndRouteIdentifier {
+    display: flex;
+    width: min-content;
+    flex-direction: row;
+}
+
+.StepTypeAndRouteIdentifierWrapper {
+    display: flex;
+    width: min-content;
+    flex-direction: row;
+}
+
+.StepTypeAndRouteIdentifierWrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.StepLocationDescription > .stop-accessibility-icon {
+    opacity: 0;
+    margin: 0.5rem;
+}
+
+.TravelPlanStopTimetableLink {
+    display: none;
+}
+
+.StepSummaryOnRoute,
+.StepSummaryWalk,
+.StepLocationDescription {
+    margin-left: 2rem;
+}
+
+.TravelPlanFooter {
+    display: none;
+}
+
+td {
+    color: white;
+}
