@@ -12,13 +12,17 @@ yesses = ['y', 'yes']
 
 name = input('What do be thou name? ')
 
+days=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+nb_days = 5+1 # added one because first, sunday, is skipped
+days_start = 1
+
 weekends = input("Do you have any classes on weekends? [y/N] ")
 if weekends.lower() in yesses:
-    print('soy lazy rn, sooo.. just continue and text me to update it (also I\'m sorry for you)')
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    nb_days = 7
+    days_start = 0
 
-days=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
-for day in range(1,6):
+for day in range(days_start, nb_days):
     is_class = input(f'Do you have class on {days[day-1]}? [Y/n] ')
     if is_class.lower() in yesses or is_class.lower() == '\n':
         class_num = int(input('How many classes do you have that day? '))
