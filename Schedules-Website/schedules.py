@@ -8,8 +8,8 @@ app = Flask(__name__)
 with open('./schedules.json', 'r') as file:
     schedules = json.load(file)
 
+#replace this string with an md5 hash of the wanted password
 password = "__password_md5_hash__"
-
 
 @app.route("/<person>.png", methods=["GET"])
 def get_img(person):
@@ -87,6 +87,8 @@ def get_schedules():
     else:
         return "Error: {}".format(response.status_code)
 
+
+#FIXME: make in input field for the start and end locations with a javascript frontend to process the browser's geolocation if chosen
 
 #@app.route("/bus", methods=["GET"])
 #def bus_routes():
