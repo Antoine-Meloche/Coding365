@@ -49,9 +49,10 @@ def get_schedules():
                     "h")
                 start_time = int(start_time[0])*60 + int(start_time[1])
                 duration = int(schedules[person][dotw][course]["duration"])
-                end_time = f"{(start_time+duration)//60}h{round(((start_time+duration)/60-(start_time+duration)//60)*60)}"
-                if end_time.split("h")[1] == "0":
-                    end_time += "0"
+                end_hours = (start_time+duration)//60
+                end_time = f"{end_hours}h{round(((start_time+duration)/60-end_hours)*60)}"
+                if int(end_time.split("h")[1]) < 10:
+                    end_time = f"{end_time.split('h')[0]}h0{end_time.split('h')[1]}"
 
                 if start_time <= current_time and current_time <= start_time + duration:
                     person_list.append(
