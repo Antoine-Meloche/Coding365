@@ -111,3 +111,15 @@
 ## Day 28
 
 *SchedulesWebsite* - Finally ready to release an initial version, planning to add integration with hastinfo bus info
+
+## Day 29
+*SchedulesWebsite* - Added weekends to schedule-maker
+
+## Day 30
+*SchedulesWebsite* - Added comments to make code more readable for future modifications
+
+## Day 31
+*SchedulesWebsite* - Fixed end time for the 10 first minutes of the hour
+
+## Day 32
+*ShortRust* - Started on a GUI application written in Rust to make shortcuts and automations on linux. The project is hosted on  a separate [github repo](https://github.com/Antoine-Meloche/ShortRust).
