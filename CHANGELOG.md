@@ -123,3 +123,9 @@
 
 ## Day 32
 *ShortRust* - Started on a GUI application written in Rust to make shortcuts and automations on linux. The project is hosted on  a separate [github repo](https://github.com/Antoine-Meloche/ShortRust).
+
+## Day 33
+*ShortRust*
+
+## Day 34
+*ShortRust*
