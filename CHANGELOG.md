@@ -129,3 +129,6 @@
 
 ## Day 34
 *ShortRust*
+
+## Day 35
+*ShortRust* - Added grid for shortcuts missing text overflow prevention
