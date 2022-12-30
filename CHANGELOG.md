@@ -135,3 +135,6 @@
 
 ## Day 36
 *ShortRust*
+
+## Day 37
+*ShortRust*
