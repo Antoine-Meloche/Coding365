@@ -10,7 +10,7 @@
 
 ## Day 3
 
-**
+*RustCommit*
 
 ## Day 4
 
@@ -143,4 +143,7 @@
 *ShortcutButton* - Created a Gnome extension to execute a chosen command on click [ShortcutButton](https://github.com/Antoine-Meloche/ShortcutButton)
 
 ## Day 39
-*ShortcutButton*
+*ShortcutButton* - release 1.0.0 & 1.0.1
+
+## Day 40
+*ShortcutButton* - release 1.1.0
