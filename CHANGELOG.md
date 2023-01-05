@@ -147,3 +147,9 @@
 
 ## Day 40
 *ShortcutButton* - release 1.1.0
+
+# Day 41
+*ShortcutButton* - Work on icon choosing
+
+# Day 42
+*ShortcutButton* - Work on icon choosing
