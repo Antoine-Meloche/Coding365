@@ -148,8 +148,11 @@
 ## Day 40
 *ShortcutButton* - release 1.1.0
 
-# Day 41
+## Day 41
 *ShortcutButton* - Work on icon choosing
 
-# Day 42
+## Day 42
 *ShortcutButton* - Work on icon choosing
+
+## Day 43
+*Harvard CS50P* - Completed weeks 1 through 4
