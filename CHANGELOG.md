@@ -156,3 +156,6 @@
 
 ## Day 43
 *Harvard CS50P* - Completed weeks 1 through 4
+
+## Day 44
+*Harvard CS50* - Worked on week 5
