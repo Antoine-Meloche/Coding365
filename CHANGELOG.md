@@ -158,7 +158,10 @@
 *Harvard CS50P* - Completed weeks 1 through 4
 
 ## Day 44
-*Harvard CS50* - Worked on week 5
+*Harvard CS50P* - Worked on week 5
 
 ## Day 45
-*Harvard CS50* - Work on week 5
+*Harvard CS50P* - Work on week 5
+
+## Day 46
+*Harvard CS50P* - Work on week 5
