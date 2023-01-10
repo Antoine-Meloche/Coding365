@@ -165,3 +165,6 @@
 
 ## Day 46
 *Harvard CS50P* - Work on week 5
+
+## Day 47
+*Harvard CS50P* - Finished week 5 and started week 6
