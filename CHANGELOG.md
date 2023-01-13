@@ -174,3 +174,6 @@
 
 ## Day 29
 *Harvard CS50P* - Finished week 6
+
+## Day 30
+*Harvard CS50P* - Work on week 7
