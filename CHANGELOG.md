@@ -172,8 +172,11 @@
 ## Day 48
 *Harvard CS50P* - Work on week 6
 
-## Day 29
+## Day 49
 *Harvard CS50P* - Finished week 6
 
-## Day 30
+## Day 50
+*Harvard CS50P* - Work on week 7
+
+## Day 51
 *Harvard CS50P* - Work on week 7
