@@ -180,3 +180,6 @@
 
 ## Day 51
 *Harvard CS50P* - Work on week 7
+
+## Day 52
+*Harvard CS50P* - Finished weeks 7 and 8
