@@ -183,3 +183,6 @@
 
 ## Day 52
 *Harvard CS50P* - Finished weeks 7 and 8
+
+## Day 53
+*Harvard CS50P* - Started final project
