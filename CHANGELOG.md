@@ -186,3 +186,6 @@
 
 ## Day 53
 *Harvard CS50P* - Started final project
+
+## Day 54
+*Harvard CS50P* - Finalized final project
