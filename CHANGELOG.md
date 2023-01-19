@@ -189,3 +189,6 @@
 
 ## Day 54
 *Harvard CS50P* - Finalized final project
+
+## Day 55
+*Harvard CS50P* - Last changes to project
