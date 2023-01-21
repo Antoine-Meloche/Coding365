@@ -192,3 +192,9 @@
 
 ## Day 55
 *Harvard CS50P* - Last changes to project
+
+## Day 56
+*SchedulesWebsite* - Some unfinished work on the bus feature, will be public in the upcoming days
+
+## Day 57
+*SchedulesWebsite* - Almost done on geocoding and reverse geocoding for the initial and final locations, should be public tomorrow
