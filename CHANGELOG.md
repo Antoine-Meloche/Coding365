@@ -198,3 +198,6 @@
 
 ## Day 57
 *SchedulesWebsite* - Almost done on geocoding and reverse geocoding for the initial and final locations, should be public tomorrow
+
+## Day 58
+*SchedulesWebsite* - Bus routing is functional missing styling
