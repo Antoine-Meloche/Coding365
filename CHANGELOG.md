@@ -201,3 +201,6 @@
 
 ## Day 58
 *SchedulesWebsite* - Bus routing is functional missing styling
+
+## Day 59
+*SchedulesWebsite* - Improvement to the schedule-maker
