@@ -204,3 +204,6 @@
 
 ## Day 59
 *SchedulesWebsite* - Improvement to the schedule-maker
+
+## Day 60
+*SchedulesWebsite* - Added weekend support
