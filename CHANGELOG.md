@@ -207,3 +207,6 @@
 
 ## Day 60
 *SchedulesWebsite* - Added weekend support
+
+## Day 61
+*SchedulesWebsite* - Testing fullcalendar for user schedule creation
