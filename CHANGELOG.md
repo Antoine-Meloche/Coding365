@@ -210,3 +210,6 @@
 
 ## Day 61
 *SchedulesWebsite* - Testing fullcalendar for user schedule creation
+
+## Day 62
+*SchedulesWebsite* - Frontend minus styling
