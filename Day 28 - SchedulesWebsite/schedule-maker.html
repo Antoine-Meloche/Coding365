@@ -4,13 +4,63 @@
 <head>
     <meta charset='utf-8' />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
-    </link>
     <script>
+
+        var selectStart = '';
+        var selectEnd = '';
+        var eventName = '';
+        var eventColor = '';
+        var calendar;
 
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.querySelector('.calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridWeek'
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                timeZone: 'EST',
+                headerToolbar: {
+                    left: '',
+                    center: 'addEventButton',
+                    right: 'timeGridWeek'
+                },
+                slotLabelInterval: {
+                    hours: 0.5
+                },
+                firstDay: 1,
+                dayHeaderFormat: {
+                    weekday: 'long'
+                },
+                slotLabelFormat: {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    omitZeroMinute: false,
+                    hour12: false
+                },
+                initialView: 'timeGridWeek',
+                slotDuration: '00:30:00',
+                slotMinTime: '08:00:00',
+                slotMaxTime: '21:00:00',
+                allDaySlot: false,
+                editable: true,
+                dayMaxEvents: true,
+                contentHeight: 'auto',
+                customButtons: {
+                    addEventButton: {
+                        text: 'Add event',
+                        click: function () {
+                            calendar.addEvent({
+                                title: eventName,
+                                start: selectStart,
+                                end: selectEnd,
+                                backgroundColor: eventColor
+                            });
+                        }
+                    }
+                },
+                selectable: true,
+                select: (info) => {
+                    selectStart = info.start
+                    selectEnd = info.end
+                },
+                longPressDelay: 150
             });
             calendar.render();
         });
@@ -20,8 +70,27 @@
 
 <body>
     <main>
-        <div class='calendar'></div>
+        <div class='calendar'>
+            <input class="event-name-input" style="position:absolute;top:1rem;left:3rem;min-width:20rem" type="text">
+            <input class="event-color-input" style="position:absolute;top:1rem;left:30rem" type="color" value="#3788d8">
+            <button class="save-btn" style="position:absolute;top:1rem;right:10rem">Save</button>
+        </div>
     </main>
 </body>
+
+<script>
+    eventNameInput = document.querySelector('.event-name-input')
+    eventNameInput.onblur = () => {
+        eventName = eventNameInput.value
+    }
+    eventColorInput = document.querySelector('.event-color-input')
+    eventColorInput.onblur = () => {
+        eventColor = eventColorInput.value
+    }
+    saveBtn = document.querySelector('.save-btn')
+    saveBtn.onclick = () => {
+        console.log(calendar.getEvents())
+    }
+</script>
 
 </html>
