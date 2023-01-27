@@ -4,6 +4,7 @@
 <head>
     <meta charset='utf-8' />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
+    <link rel="stylesheet" href="static/schedule-maker.css">
     <script>
 
         var selectStart = '';
@@ -71,9 +72,9 @@
 <body>
     <main>
         <div class='calendar'>
-            <input class="event-name-input" style="position:absolute;top:1rem;left:3rem;min-width:20rem" type="text">
-            <input class="event-color-input" style="position:absolute;top:1rem;left:30rem" type="color" value="#3788d8">
-            <button class="save-btn" style="position:absolute;top:1rem;right:10rem">Save</button>
+            <input class="event-name-input" type="text" placeholder="Event Name">
+            <input class="event-color-input"type="color" value="#3788d8">
+            <button class="save-btn">Save</button>
         </div>
     </main>
 </body>
