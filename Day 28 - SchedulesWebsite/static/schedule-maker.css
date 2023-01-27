@@ -1,0 +1,60 @@
+* {
+  background: #242424 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+.save-btn,
+.event-name-input,
+.event-color-input {
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bolder !important;
+  background: #484848 !important;
+  border: none !important;
+  height: 2rem !important;
+}
+
+.event-color-input {
+  overflow: hidden;
+  padding: 0 !important;
+  width: 2rem !important;
+  border-radius: 50% !important;
+  cursor: pointer;
+  left:30rem
+}
+
+.event-name-input {
+  min-width: 20rem;
+  left: 3rem;
+}
+
+.fc-header-toolbar {
+  height: 2rem !important;
+}
+
+.fc-button {
+  position: absolute !important;
+  top: 1rem !important;
+  z-index: 10 !important;
+  display: grid !important;
+  place-content: center !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bolder !important;
+  background: #484848 !important;
+  border: none !important;
+  height: 2rem !important;
+  text-transform: capitalize !important;
+}
+
+.fc-timeGridWeek-button {
+  right: 2rem !important;
+  background-color: #323232 !important;
+  color: #606060 !important;
+}
