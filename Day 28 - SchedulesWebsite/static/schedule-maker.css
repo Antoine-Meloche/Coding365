@@ -58,3 +58,38 @@
   background-color: #323232 !important;
   color: #606060 !important;
 }
+
+.fc-col-header-cell-cushion,
+.fc-timegrid-slot-label-cushion {
+  color: white !important;
+}
+
+.fc-theme-standard td {
+  border: 1px solid white !important;
+}
+
+.fc-timegrid-slot-lane,
+.fc-timegrid-slot-label {
+  outline: 1px solid white;
+}
+
+.fc-col-header-cell {
+  position: relative !important;
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.fc-col-header-cell::before {
+  content: "";
+  position: absolute !important;
+  height: 100vh !important;
+  z-index: 12 !important;
+  outline: 1px solid white !important;
+  top: 0;
+  left: 0;
+}
+
+.fc-highlight {
+  background: rgba(255, 255, 255, 0.1) !important;
+  outline: 2px solid white;
+}
