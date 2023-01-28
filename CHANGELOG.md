@@ -216,3 +216,6 @@
 
 ## Day 63
 *SchedulesWebsite* - Frontend styling start
+
+## Day 64
+*SchedulesWebsite* - More frontend styling
