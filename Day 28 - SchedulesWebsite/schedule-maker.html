@@ -35,6 +35,12 @@
                     omitZeroMinute: false,
                     hour12: false
                 },
+                eventTimeFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    meridiem: false,
+                    hour12: false,
+                },
                 initialView: 'timeGridWeek',
                 slotDuration: '00:30:00',
                 slotMinTime: '08:00:00',
@@ -73,7 +79,7 @@
     <main>
         <div class='calendar'>
             <input class="event-name-input" type="text" placeholder="Event Name">
-            <input class="event-color-input"type="color" value="#3788d8">
+            <input class="event-color-input" type="color" value="#3788d8">
             <button class="save-btn">Save</button>
         </div>
     </main>
@@ -84,14 +90,23 @@
     eventNameInput.onblur = () => {
         eventName = eventNameInput.value
     }
+    eventName = eventNameInput.value
+
     eventColorInput = document.querySelector('.event-color-input')
     eventColorInput.onblur = () => {
         eventColor = eventColorInput.value
     }
+    eventColor = eventColorInput.value
+
     saveBtn = document.querySelector('.save-btn')
     saveBtn.onclick = () => {
         console.log(calendar.getEvents())
     }
+
+    eventColorInput.onchange = () => {
+        document.documentElement.style.setProperty('--highlight-colour', eventColorInput.value);
+    }
+    document.documentElement.style.setProperty('--highlight-colour', eventColorInput.value);
 </script>
 
 </html>
