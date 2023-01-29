@@ -1,94 +1,119 @@
-body {
-    background-color: #242424;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+  --highlight-colour: #3788d8;
 }
 
-ul {
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    list-style: none;
-    gap: 1rem;
+*:not(
+    .fc-event,
+    .fc-event > *,
+    .fc-event-main > *,
+    .fc-event-frame,
+    .fc-event-title-container,
+    .fc-event-title,
+    .fc-event-time
+  ) {
+  background: #242424 !important;
 }
 
-ul > li {
-    width: 75vw;
-    padding: 1rem;
-    border-bottom: 1px solid #202020;
-    position: relative;
+.fc-event-main,
+.fc-event-main > *,
+.fc-event-frame,
+.fc-event-title-container,
+.fc-event-title,
+.fc-event-time {
+  background: none !important;
 }
 
-
-.StepFirstColumn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.StepSecondColumn {
-    opacity: 0;
-    height: 2rem;
+* {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1rem !important;
 }
 
-.stepstarttime {
-    display: inline;
-    margin: 1rem;
-    width: min-content;
+.save-btn,
+.event-name-input,
+.event-color-input {
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bolder !important;
+  background: #484848 !important;
+  border: none !important;
+  height: 2rem !important;
 }
 
-.StepTypeImage {
-    display: inline;
-    width: min-content;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+.event-color-input {
+  overflow: hidden;
+  padding: 0 !important;
+  width: 2rem !important;
+  border-radius: 50% !important;
+  cursor: pointer;
+  left: 30rem;
 }
 
-.StepTypeAndRouteIdentifier {
-    display: flex;
-    width: min-content;
-    flex-direction: row;
+.event-name-input {
+  min-width: 20rem;
+  left: 3rem;
 }
 
-.StepTypeAndRouteIdentifierWrapper {
-    display: flex;
-    width: min-content;
-    flex-direction: row;
+.fc-header-toolbar {
+  height: 2rem !important;
 }
 
-.StepTypeAndRouteIdentifierWrapper > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.fc-button {
+  position: absolute !important;
+  top: 1rem !important;
+  z-index: 10 !important;
+  display: grid !important;
+  place-content: center !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bolder !important;
+  background: #484848 !important;
+  border: none !important;
+  height: 2rem !important;
+  text-transform: capitalize !important;
 }
 
-.StepLocationDescription > .stop-accessibility-icon {
-    opacity: 0;
-    margin: 0.5rem;
+.fc-timeGridWeek-button {
+  right: 2rem !important;
+  background-color: #323232 !important;
+  color: #606060 !important;
 }
 
-.TravelPlanStopTimetableLink {
-    display: none;
+.fc-col-header-cell-cushion,
+.fc-timegrid-slot-label-cushion {
+  color: white !important;
 }
 
-.StepSummaryOnRoute,
-.StepSummaryWalk,
-.StepLocationDescription {
-    margin-left: 2rem;
+.fc-theme-standard td {
+  border: 1px solid white !important;
 }
 
-.TravelPlanFooter {
-    display: none;
+.fc-timegrid-slot-lane,
+.fc-timegrid-slot-label {
+  outline: 1px solid white;
 }
 
-td {
-    color: white;
+.fc-col-header-cell {
+  position: relative !important;
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.fc-col-header-cell::before {
+  content: "";
+  position: absolute !important;
+  height: 100vh !important;
+  z-index: 12 !important;
+  outline: 1px solid white !important;
+  top: 0;
+  left: 0;
+}
+
+.fc-highlight {
+  background: var(--highlight-colour) !important;
+  outline: 2px solid white;
 }
