@@ -4,6 +4,10 @@
 <head>
     <meta charset='utf-8' />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"
+        integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <link rel="stylesheet" href="static/schedule-maker.css">
     <script>
 
@@ -26,6 +30,7 @@
                     hours: 0.5
                 },
                 firstDay: 1,
+                hiddenDays: [0, 6],
                 dayHeaderFormat: {
                     weekday: 'long'
                 },
@@ -44,7 +49,9 @@
                 initialView: 'timeGridWeek',
                 slotDuration: '00:30:00',
                 slotMinTime: '08:00:00',
-                slotMaxTime: '21:00:00',
+                slotMaxTime: '18:00:00',
+                expandRows: true,
+                displayEventEnd: true,
                 allDaySlot: false,
                 editable: true,
                 dayMaxEvents: true,
@@ -69,6 +76,10 @@
                 },
                 longPressDelay: 150
             });
+            calendar.setOption('slotLabelFormat', function (data) {
+                return moment(data.date).format("HH:mm") + " - " + moment(data.date).add(30, 'minutes').format("HH:mm");
+            });
+
             calendar.render();
         });
 
@@ -101,6 +112,12 @@
     saveBtn = document.querySelector('.save-btn')
     saveBtn.onclick = () => {
         console.log(calendar.getEvents())
+        domtoimage.toJpeg(document.querySelector('.fc-view-harness'), { quality: 0.95 }).then((dataUrl) => {
+            var link = document.createElement('a');
+            link.download = 'schedule.png';
+            link.href = dataUrl;
+            link.click();
+        })
     }
 
     eventColorInput.onchange = () => {
