@@ -222,3 +222,6 @@
 
 ## Day 65
 *SchedulesWebsite* - Pretty much done frontend styling
+
+## Day 66
+*SchedulesWebsite* - Frontend styling and saving image of schedule
