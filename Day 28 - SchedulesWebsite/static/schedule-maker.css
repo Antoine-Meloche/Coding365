@@ -1,5 +1,33 @@
-* {
+:root {
+  --highlight-colour: #3788d8;
+}
+
+html > * {
+  width: 550px;
+}
+
+*:not(
+    .fc-event,
+    .fc-event > *,
+    .fc-event-main > *,
+    .fc-event-frame,
+    .fc-event-title-container,
+    .fc-event-title,
+    .fc-event-time
+  ) {
   background: #242424 !important;
+}
+
+.fc-event-main,
+.fc-event-main > *,
+.fc-event-frame,
+.fc-event-title-container,
+.fc-event-title,
+.fc-event-time {
+  background: none !important;
+}
+
+* {
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 1rem !important;
 }
@@ -19,13 +47,17 @@
   height: 2rem !important;
 }
 
+.save-btn {
+  cursor: pointer !important;
+}
+
 .event-color-input {
   overflow: hidden;
   padding: 0 !important;
   width: 2rem !important;
   border-radius: 50% !important;
   cursor: pointer;
-  left:30rem
+  left: 30rem;
 }
 
 .event-name-input {
@@ -90,6 +122,6 @@
 }
 
 .fc-highlight {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: var(--highlight-colour) !important;
   outline: 2px solid white;
 }
