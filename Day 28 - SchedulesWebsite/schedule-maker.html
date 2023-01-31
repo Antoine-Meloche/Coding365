@@ -15,6 +15,7 @@
         var selectEnd = '';
         var eventName = '';
         var eventColor = '';
+        var eventNumber = '';
         var calendar;
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -64,7 +65,8 @@
                                 title: eventName,
                                 start: selectStart,
                                 end: selectEnd,
-                                backgroundColor: eventColor
+                                backgroundColor: eventColor,
+                                roomNumber: eventRoom,
                             });
                         }
                     }
@@ -91,6 +93,7 @@
         <div class='calendar'>
             <input class="event-name-input" type="text" placeholder="Event Name">
             <input class="event-color-input" type="color" value="#3788d8">
+            <input class="event-room-input" type="text" placeholder="Room number">
             <button class="save-btn">Save</button>
         </div>
     </main>
@@ -102,6 +105,12 @@
         eventName = eventNameInput.value
     }
     eventName = eventNameInput.value
+
+    eventRoomInput = document.querySelector('.event-room-input')
+    eventRoomInput.onblur = () => {
+        roomNumber = eventRoomInput.value
+    }
+    roomNumber = eventRoomInput.value
 
     eventColorInput = document.querySelector('.event-color-input')
     eventColorInput.onblur = () => {
