@@ -225,3 +225,6 @@
 
 ## Day 66
 *SchedulesWebsite* - Frontend styling and saving image of schedule
+
+## Day 67
+*SchedulesWebsite* - Work on adding room number 
