@@ -34,7 +34,8 @@ html > * {
 
 .save-btn,
 .event-name-input,
-.event-color-input {
+.event-color-input,
+.event-room-input {
   position: absolute;
   top: 1rem;
   right: 10rem;
@@ -51,13 +52,18 @@ html > * {
   cursor: pointer !important;
 }
 
+.event-room-input {
+  min-width: 20rem;
+  left: 24rem;
+}
+
 .event-color-input {
   overflow: hidden;
   padding: 0 !important;
   width: 2rem !important;
   border-radius: 50% !important;
   cursor: pointer;
-  left: 30rem;
+  left: 45rem;
 }
 
 .event-name-input {
