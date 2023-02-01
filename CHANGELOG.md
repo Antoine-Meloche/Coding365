@@ -227,4 +227,7 @@
 *SchedulesWebsite* - Frontend styling and saving image of schedule
 
 ## Day 67
-*SchedulesWebsite* - Work on adding room number 
+*SchedulesWebsite* - Work on adding room number
+
+## Day 68
+*SchedulesWebsite* - Work on adding room number, still working on time
