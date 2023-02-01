@@ -15,7 +15,7 @@
         var selectEnd = '';
         var eventName = '';
         var eventColor = '';
-        var eventNumber = '';
+        var eventRoom = '';
         var calendar;
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -71,6 +71,14 @@
                         }
                     }
                 },
+                eventContent: (arg) => {
+                    var event = arg.event;
+                    var customHtml = '';
+                    // customHtml += "<span class='r10 font-xxs font-bold' style='overflow: hidden;'>" + event.title + "</span>";
+                    // customHtml += "<span class='r10 highlighted-badge font-xxs font-bold'>" + event.extendedProps.roomNumber + "</span>";
+                    customHtml += '<div class="fc-event-main-frame"><div class="fc-event-time">'+("0" + event.start.getHours()).slice(-2)+"h"+("0" + event.start.getMinutes()).slice(-2)+" - "+("0" + event.end.getHours()).slice(-2)+"h"+("0" + event.end.getMinutes()).slice(-2)+'</div><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.title+'</div><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.extendedProps.roomNumber+"</div></div></div>";
+                    return { html: customHtml };
+                },
                 selectable: true,
                 select: (info) => {
                     selectStart = info.start
@@ -108,9 +116,9 @@
 
     eventRoomInput = document.querySelector('.event-room-input')
     eventRoomInput.onblur = () => {
-        roomNumber = eventRoomInput.value
+        eventRoom = eventRoomInput.value
     }
-    roomNumber = eventRoomInput.value
+    eventRoom = eventRoomInput.value
 
     eventColorInput = document.querySelector('.event-color-input')
     eventColorInput.onblur = () => {
