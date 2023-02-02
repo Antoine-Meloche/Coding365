@@ -28,7 +28,7 @@ name = input('What is your name? ')
 
 weekends = input("Do you have any classes on weekends? [y/N] ")
 if weekends.lower() in yesses:
-    weekend_days = ["Saturday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sunday"]
+    weekend_days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     for day in [0, 6]:
         is_class = input(f'Do you have class on {weekend_days[day]}? [Y/n] ')
         if is_class.lower() in yesses or is_class == '':
@@ -44,7 +44,7 @@ for day in range(1,6):
     if is_class.lower() in yesses or is_class == '':
         class_num = int(input('How many classes do you have that day? '))
         for i in range(class_num):
-            get_class_info(day-1)
+            get_class_info(day)
 
 print(f'''"{name}": {str(schedule).replace("'", '"')}''')
 print('Add this to schedules.json')
