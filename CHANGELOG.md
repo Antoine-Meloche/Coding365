@@ -231,3 +231,6 @@
 
 ## Day 68
 *SchedulesWebsite* - Work on adding room number, still working on time
+
+## Day 69
+*SchedulesWebsite* - Fixed bug with the output of schedule-maker.py
