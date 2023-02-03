@@ -234,3 +234,6 @@
 
 ## Day 69
 *SchedulesWebsite* - Fixed bug with the output of schedule-maker.py
+
+## Day 70
+*SchedulesWebsite* - Temporary disable of bus
