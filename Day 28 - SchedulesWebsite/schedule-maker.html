@@ -74,9 +74,8 @@
                 eventContent: (arg) => {
                     var event = arg.event;
                     var customHtml = '';
-                    // customHtml += "<span class='r10 font-xxs font-bold' style='overflow: hidden;'>" + event.title + "</span>";
-                    // customHtml += "<span class='r10 highlighted-badge font-xxs font-bold'>" + event.extendedProps.roomNumber + "</span>";
-                    customHtml += '<div class="fc-event-main-frame"><div class="fc-event-time">'+("0" + event.start.getHours()).slice(-2)+"h"+("0" + event.start.getMinutes()).slice(-2)+" - "+("0" + event.end.getHours()).slice(-2)+"h"+("0" + event.end.getMinutes()).slice(-2)+'</div><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.title+'</div><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.extendedProps.roomNumber+"</div></div></div>";
+                    // <div class="fc-event-time">'+("0" + event.start.getHours()).slice(-2)+"h"+("0" + event.start.getMinutes()).slice(-2)+" - "+("0" + event.end.getHours()).slice(-2)+"h"+("0" + event.end.getMinutes()).slice(-2)+'</div>
+                    customHtml += '<div class="fc-event-main-frame"><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.title+'</div><div class="fc-event-title-container"><div class="fc-event-title fc-sticky">'+event.extendedProps.roomNumber+"</div></div></div>";
                     return { html: customHtml };
                 },
                 selectable: true,
@@ -128,7 +127,24 @@
 
     saveBtn = document.querySelector('.save-btn')
     saveBtn.onclick = () => {
-        console.log(calendar.getEvents())
+        events = calendar.getEvents();
+        eventsOut = {
+            "0": [],
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+        }
+
+        for (var i=0;i<events.length;i++) {
+            var event = events[i];
+            eventsOut[event._instance.range.start.getDay()].push(`${event._def.title}: {"start": ${moment(event._instance.range.start).add(5, 'hours').format("H[h]mm")},"duration": ${(event._instance.range.end - event._instance.range.start) / 60000},"room": ${event._def.extendedProps.roomNumber},}`)
+        }
+
+        console.log(events)
+        console.log(eventsOut)
         domtoimage.toJpeg(document.querySelector('.fc-view-harness'), { quality: 0.95 }).then((dataUrl) => {
             var link = document.createElement('a');
             link.download = 'schedule.png';
