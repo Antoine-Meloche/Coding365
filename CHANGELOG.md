@@ -240,3 +240,6 @@
 
 ## Day 71
 *SchedulesWebsite* - Schedule.json output from schedule-maker.html
+
+## Day 72
+*SchedulesWebsite* - Schedule.json output from schedule-maker.html (almost done)
