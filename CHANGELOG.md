@@ -243,3 +243,6 @@
 
 ## Day 72
 *SchedulesWebsite* - Schedule.json output from schedule-maker.html (almost done)
+
+## Day 73
+*SchedulesWebsite* - Research and start on expoeting the schedules as ics
