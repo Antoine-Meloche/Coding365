@@ -245,4 +245,7 @@
 *SchedulesWebsite* - Schedule.json output from schedule-maker.html (almost done)
 
 ## Day 73
-*SchedulesWebsite* - Research and start on expoeting the schedules as ics
+*SchedulesWebsite* - Research and start on exporting the schedules as ics
+
+## Day 74
+*SchedulesWebsite* - Added ical/ics export
