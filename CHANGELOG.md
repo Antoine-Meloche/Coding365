@@ -249,3 +249,6 @@
 
 ## Day 74
 *SchedulesWebsite* - Added ical/ics export
+
+## Day 75
+*SchedulesWebsite* - Added json download and ics events end date
