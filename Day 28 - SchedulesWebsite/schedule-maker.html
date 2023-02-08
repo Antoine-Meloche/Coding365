@@ -13,6 +13,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js "></script>
     <script src=" https://cdn.jsdelivr.net/npm/blob.js@1.0.1/Blob.min.js "></script>
     <link rel="stylesheet" href="static/schedule-maker.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <script>
 
         var selectStart = '';
@@ -156,9 +157,11 @@
 
         cal = ics();
         calendar.getEvents().forEach(function (event, i) {
-            cal.addEvent(event.title, '', event.extendedProps.roomNumber, event.start, event.end);
+            cal.addEvent(event.title, '', event.extendedProps.roomNumber, event.start, event.end, {'freq': 'WEEKLY', 'until': 'end date'}); #FIXME: Add date
         });
         cal.download('schedule', '.ics')
+
+        saveAs(new Blob([JSON.stringify(eventsOut)], {type: 'text/plain;charset=utf-8'}), 'schedule.json')
     }
 
     eventColorInput.onchange = () => {
