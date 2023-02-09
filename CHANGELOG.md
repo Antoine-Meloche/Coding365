@@ -252,3 +252,7 @@
 
 ## Day 75
 *SchedulesWebsite* - Added json download and ics events end date
+
+## Day 76
+*EasyCSS* - Extremely rudimentary start to the project
+
