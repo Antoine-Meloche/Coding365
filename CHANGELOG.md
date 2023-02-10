@@ -256,3 +256,6 @@
 ## Day 76
 *EasyCSS* - Extremely rudimentary start to the project
 
+## Day 77
+*Perlin flow field* - Start on perlin flow field image generation application
+
