@@ -1,18 +1,19 @@
-import PySimpleGUI as sg
+import gi
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
 
-sg.theme('DarkAmber')
-layout = [
-        [sg.Text("EasyCSS")],
-        [sg.Text("Button class name"), sg.InputText()],
-        [sg.Button("Save")]
-        ]
+def on_activate(app):
+    win = Gtk.ApplicationWindow(application=app)
+    btn = Gtk.Button(label="Save")
+    btn.connect('clicked', save_now)
+    win.set_child(btn)
+    win.present()
 
-window = sg.Window("EasyCSS", layout)
 
-while True:
-    event, values = window.read()
-    if event == sg.WIN_CLOSED or event == 'Cancel':
-        break
-    print('The button class name is: ' + values[0])
+def save_now(_args):
+    print('Definitively not saved')
 
-window.close()
+
+app = Gtk.Application(application_id='antoine.meloche.EasyCSS')
+app.connect('activate', on_activate)
+app.run(None)
