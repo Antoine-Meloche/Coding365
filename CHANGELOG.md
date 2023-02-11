@@ -259,3 +259,6 @@
 ## Day 77
 *Perlin flow field* - Start on perlin flow field image generation application
 
+## Day 78
+*Perlin flow field* - Perlin noise generation using p5js
+
