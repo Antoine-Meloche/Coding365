@@ -3,14 +3,14 @@ let particles = [];
 let flowField = [];
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(1000, 1000);
   zOff = 0;
   c = 10;
   inc = 0.1;
   cols = floor(width / c);
   rows = floor(height / c);
 
-  for (var i = 0; i < 2000; i++) {
+  for (var i=0; i<10000; i++) {
     particles[i] = new Particle();
   }
   
@@ -73,7 +73,7 @@ function Particle() {
 
   this.show = function() {
     stroke(255, 3);
-    strokeWeight(2);
+    strokeWeight(1)
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }

@@ -262,3 +262,6 @@
 ## Day 78
 *Perlin flow field* - Perlin noise generation using p5js
 
+## Day 79
+*Perlin flow field* - Small changes and research for the future of this project
+
