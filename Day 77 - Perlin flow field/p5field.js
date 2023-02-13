@@ -1,14 +1,19 @@
 let inc, c, cols, rows, zOff;
 let particles = [];
 let flowField = [];
+let timer = 0;
 
 function setup() {
-  createCanvas(1000, 1000);
+  colour = color(random(255), random(255), random(255), 3)
+  
+  createCanvas(250, 250);
   zOff = 0;
   c = 10;
   inc = 0.1;
   cols = floor(width / c);
   rows = floor(height / c);
+  
+  frameRate();
 
   for (var i=0; i<10000; i++) {
     particles[i] = new Particle();
@@ -18,6 +23,12 @@ function setup() {
 }
 
 function draw() {
+  if (millis() >= 2000+timer) {
+    timer = millis();
+    //saveCanvas('flow', 'png');
+    //noLoop();
+  }
+  
   let yOff = 0;
   for (var y = 0; y < rows; y++) {
     let xoff = 0;
@@ -72,7 +83,8 @@ function Particle() {
   }
 
   this.show = function() {
-    stroke(255, 3);
+    // stroke(255, 3);
+    stroke(colour, 3, 3)
     strokeWeight(1)
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();

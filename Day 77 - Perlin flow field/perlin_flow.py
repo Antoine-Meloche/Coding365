@@ -3,12 +3,15 @@ from perlin_noise import PerlinNoise
 import random
 import math
 
+from datetime import datetime
+
 TWO_PI = math.pi * 2
 
 num = input('How many images should be generated?: ')
+start = datetime.now()
 
 for j in range(int(num)):
-    image = Image.new('RGB', (2000, 2000), color="#000000")
+    image = Image.new('RGB', (500, 500), color="#000000")
     pixels = image.load()
     draw = ImageDraw.Draw(image)
 
@@ -17,8 +20,8 @@ for j in range(int(num)):
     for _ in range(10):
         color = [random.randrange(0, 255), random.randrange(0, 255), random.randrange(0, 255)]
 
-        x = random.randrange(0, 1500)
-        y = random.randrange(0, 1500)
+        x = random.randrange(0, 500)
+        y = random.randrange(0, 500)
 
         velocity = [1, 1]
     
@@ -28,18 +31,18 @@ for j in range(int(num)):
             x += velocity[0]
             y += velocity[1]
     
-            if x >= 1500:
-                x -= 1500
+            if x >= 500:
+                x -= 500
                 prev_x = x
             elif x <= 0:
-                x += 1500
+                x += 500
                 prev_x = x
 
-            if y >= 1500:
-                y -= 1500
+            if y >= 500:
+                y -= 500
                 prev_y = y
             elif y <= 0:
-                y += 1500
+                y += 500
                 prev_y = y
 
             velocity[0] += math.cos(noise([x*.01, y*.01, 0.5]) * TWO_PI)
@@ -54,7 +57,8 @@ for j in range(int(num)):
             color[1] += round(noise([i, 500, 0.5]))
             color[2] += round(noise([i, 1000, 0.5]))
 
-            draw.line([(prev_x+250, prev_y+250), (x+250, y+250)], fill=(color[0], color[1], color[2]))
+            draw.line([(prev_x, prev_y), (x, y)], fill=(color[0], color[1], color[2]))
 
     image.save(f'flow_{j}.png')
     print(f'flow_{j}.png saved')
+    print(f'time: {datetime.now() - start}')
