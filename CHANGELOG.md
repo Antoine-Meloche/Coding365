@@ -271,3 +271,6 @@
 ## Day 81
 *SchedulesWebsite* -  Added unit test for schedules.json + update
 
+## Day 82
+*PFFPFP* - Added circles.py generating concentric circular resembling figures
+
