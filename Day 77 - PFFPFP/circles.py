@@ -2,6 +2,7 @@ from PIL import Image
 import math
 import opensimplex
 from random import randrange
+from io import BytesIO
 
 def gen_circle(colour):
 
@@ -33,4 +34,8 @@ def gen_circle(colour):
 
         radius -= 30
 
-    image.save('circles.png')
+    img_io = BytesIO()
+    image.save(img_io, 'PNG')
+    img_io.seek(0)
+    return img_io
+    #image.save('circles.png')
