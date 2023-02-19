@@ -283,3 +283,6 @@
 ## Day 85
 *PFFPFP* - Another failed attempt at a opensimplex flow field
 
+## Day 86
+*DiscordReminderBot* - Start on a discord bot to send reminders
+
