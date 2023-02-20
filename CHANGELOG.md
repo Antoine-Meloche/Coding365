@@ -286,3 +286,6 @@
 ## Day 86
 *DiscordReminderBot* - Start on a discord bot to send reminders
 
+## Day 87
+*DiscordReminderBot* - Work on the bot, but mostly thinking about how it should work (inspiration from [discord-message-scheduler](https://github.com/Taaku18/discord-message-scheduler) by [Taaku18](https://github.com/Taaku18/))
+
