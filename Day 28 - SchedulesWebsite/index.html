@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Schedules Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const id = parameters.get('id');
+    const schedules = fetch(`${window.location.href}/schedules?id=${id}`);
+
+    var currentTime;
+
+    function updateTime() {
+      currentTime = new Date()
+
+      updateUI()
+    }
+    updateTime();
+    setInterval(updateTime, 60000);
+
+    function updateUI() {
+      for (var name of Object.keys(schedules)) {
+        var day = currentTime.getDay();
+ 
+        startTimeMinutes = parseInt(schedules[name][day][event]['start'].split('h')[1]);
+        startTimeHours = parseInt(schedules[name][day][event]['start'].split('h')[0])*60;
+
+        endTimeInt = parseInt(schedules[name][day][event]['start'].split('h')[1]) + parseInt(schedules[name][day][event]['start'].split('h')[0])*60 + schedules[name][day][event]['duration'];
+        endTimeHours = Math.floor(endTimeInt / 60);
+        endTimeMinutes = endTimeInt - endTimeHours*60;
+        endTimeStr = `${endTimeHours}h${endTimeMinutes < 10 ? '0' : ''}${endTimeMinutes}`;
+
+        for (var event of Object.keys(schedules[name][day])) {
+          if ((endTimeHours >= currentTime.getHours() & endTimeMinutes >= currentTime.getMinutes()) & (endTimeHours >= currentTime.getHours() & endTimeMinutes >= currentTime.getMinutes())) {
+            document.body.innerHTML += `${name}: ${schedules[name][day]}<br>`;
+          } else {
+          }
+        }
+      }
+    }
+  </script>
+</html>

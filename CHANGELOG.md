@@ -289,3 +289,6 @@
 ## Day 87
 *DiscordReminderBot* - Work on the bot, but mostly thinking about how it should work (inspiration from [discord-message-scheduler](https://github.com/Taaku18/discord-message-scheduler) by [Taaku18](https://github.com/Taaku18/))
 
+## Day 88
+*SchedulesWebsite* - Start on redesign of the website
+

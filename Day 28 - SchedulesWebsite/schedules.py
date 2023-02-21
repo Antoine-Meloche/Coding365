@@ -1,7 +1,8 @@
 import requests
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, render_template
 from hashlib import md5
 import json
+import flask
 
 app = Flask(__name__)
 
@@ -19,6 +20,28 @@ def get_img(person):
     except:
         pass
     return "<h1>404 Not Found", 418
+
+
+@app.route("/new", methods=["GET"])
+def new_schedules():
+    try:
+        if md5(request.args.get('id').encode()).hexdigest() == password:
+            return render_template('index.html')
+    except:
+        pass
+    return "<h1>404 Not Found", 418
+
+
+
+@app.route("/schedules", methods=["GET"])
+def send_schedules():
+    try:
+        if md5(request.args.get('id').encode()).hexdigest() != password:
+            return "<h1>404 Not Found", 418
+    except:
+        return "<h1>404 Not Found", 418
+
+    return flask.Response(schedules, mimetype='application/json'), 200
 
 
 @app.route("/", methods=["GET"])
