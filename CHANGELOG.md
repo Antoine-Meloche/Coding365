@@ -292,3 +292,6 @@
 ## Day 88
 *SchedulesWebsite* - Start on redesign of the website
 
+## Day 89
+*SchedulesWebsite* - Improvement to the redesign backend/frontend no style
+

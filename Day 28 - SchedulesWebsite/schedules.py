@@ -4,10 +4,11 @@ from hashlib import md5
 import json
 import flask
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 with open('./schedules.json', 'r') as file:
     schedules = json.load(file)
+    new_schedules = json.dumps(schedules)
 
 password = "a4c35816b670f3ef85f07c20727047ad"
 
@@ -25,12 +26,12 @@ def get_img(person):
 @app.route("/new", methods=["GET"])
 def new_schedules():
     try:
-        if md5(request.args.get('id').encode()).hexdigest() == password:
-            return render_template('index.html')
+        if md5(request.args.get('id').encode()).hexdigest() != password:
+            return "<h1>404 Not Found", 418
     except:
-        pass
-    return "<h1>404 Not Found", 418
+        return "<h1>404 Not Found", 418
 
+    return render_template('index.html')
 
 
 @app.route("/schedules", methods=["GET"])
@@ -41,10 +42,10 @@ def send_schedules():
     except:
         return "<h1>404 Not Found", 418
 
-    return flask.Response(schedules, mimetype='application/json'), 200
+    return flask.Response(new_schedules, mimetype='application/json'), 200
 
 
-@app.route("/", methods=["GET"])
+#@app.route("/", methods=["GET"])
 def get_schedules():
     try:
         if md5(request.args.get('id').encode()).hexdigest() != password:
