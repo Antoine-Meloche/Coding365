@@ -71,14 +71,19 @@
           endTimeHours = Math.floor(endTimeInt / 60);
           endTimeMinutes = endTimeInt - endTimeHours*60;
           endTimeStr = `${endTimeHours}h${endTimeMinutes < 10 ? '0' : ''}${endTimeMinutes}`;
-          if ((endTimeHours > currentTime.getHours() | (endTimeHours == currentTime.getHours() & endTimeMinutes > currentTime.getMinutes())) & (startTimeHours < currentTime.getHours() | (startTimeHours == currentTime.getHours() & startTimeMinutes < currentTime.getMinutes()))) {
-            person_li.innerHTML += `<a href="${name}.png?id=${id}">${name}</a> 🔴: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
+
+          if ((endTimeHours > currentTime.getHours() | (endTimeHours == currentTime.getHours() & endTimeMinutes > currentTime.getMinutes())) & (startTimeHours < currentTime.getHours() | (startTimeHours == currentTime.getHours() & startTimeMinutes <= currentTime.getMinutes()))) {
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🔴: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
             break;
-          } else if (startTimeMinutes+startTimeHours*60+5 <= currentTime.getMinutes()+currentTime.getHours()*60 & endTimeInt > currentTime.getHours*60+currentTime.getMinutes()) {
-            person_li.innerHTML += `<a href="${name}.png?id=${id}">${name}</a> 🟠: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
+          }
+
+          if (startTimeMinutes+startTimeHours*60-5 <= currentTime.getMinutes()+currentTime.getHours()*60 & endTimeInt > currentTime.getHours()*60+currentTime.getMinutes()) {
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🟠: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
             break;
-          } else if (startTimeHours > currentTime.getHours() | (startTimeHours == currentTime.getHours() & startTimeMinutes > currentTime.getMinutes())) {
-            person_li.innerHTML += `<a href="${name}.png?id=${id}>${name}</a> 🟢: ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}`;
+          }
+
+          if (endTimeInt > currentTime.getMinutes()+currentTime.getHours()*60) {
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🟢: ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}`;
             break;
           }
         }
