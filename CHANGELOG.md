@@ -304,3 +304,6 @@
 ## Day 92
 *SchedulesWebsite* - Redesign pretty much done
 
+## Day 93
+*SchedulesWebsite* - Added PWA support, missing caching for images
+

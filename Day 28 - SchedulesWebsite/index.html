@@ -4,6 +4,10 @@
     <title>Schedules Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#242424">
+    <link rel="apple-touch-icon" href="/calendar.png">
+    <meta name="description" content="A website displaying the schedules of selected people to help with coordination of events throughout the day">
   </head>
   <body>
     <ul>
@@ -39,6 +43,14 @@
     const queryString = window.location.search;
     const parameters = new URLSearchParams(queryString);
     const id = parameters.get('id');
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register(`/serviceWorker.js?id=${id}`)
+      })
+    }
+
     var schedules;
     fetch(`schedules?id=${id}`).then((response) => response.json()).then((data) => {
       schedules = data;
