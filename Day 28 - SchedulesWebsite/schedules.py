@@ -3,6 +3,7 @@ from flask import Flask, request, send_file, render_template
 from hashlib import md5
 import json
 import flask
+import glob
 
 app = Flask(__name__, template_folder='.')
 
@@ -124,6 +125,19 @@ def get_service_worker():
 @app.route("/favicon.svg", methods=["GET", "POST"])
 def get_favicon():
     return send_file("favicon.svg", mimetype="image/svg+xml")
+
+
+@app.route("/image-paths", methods=["GET"])
+def get_image_paths():
+    try:
+        if md5(request.args.get('id').encode()).hexdigest() != password:
+            return "<h1>404 Not Found", 418
+    except:
+        return "<h1>404 Not Found", 418
+
+    images = glob.glob('./*.png')
+
+    return json.dumps(images)
 
 
 if __name__ == "__main__":

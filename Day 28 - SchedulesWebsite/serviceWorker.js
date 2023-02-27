@@ -4,10 +4,14 @@ const queryString = location.search;
 const parameters = new URLSearchParams(queryString);
 const id = parameters.get('id');
 
-const assets = [
-  "/",
-  `/schedules.json?${id}`,
+let assets = [
+  "/new",
+  `/schedules?id=${id}`,
 ]
+
+fetch(`/image-paths?id=${id}`).then(res => res.json()).then(data => {
+  assets = assets.concat(data)
+})
 
 self.addEventListener('install', installEvent => {
   installEvent.waitUntil(

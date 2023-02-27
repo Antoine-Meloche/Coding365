@@ -307,3 +307,6 @@
 ## Day 93
 *SchedulesWebsite* - Added PWA support, missing caching for images
 
+## Day 94
+*SchedulesWebsite* - Work on caching images for PWA
+
