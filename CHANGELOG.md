@@ -310,3 +310,6 @@
 ## Day 94
 *SchedulesWebsite* - Work on caching images for PWA
 
+## Day 95
+*SchedulesWebsite* - Work on using the PWA offline (still not working)
+

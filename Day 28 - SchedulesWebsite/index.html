@@ -47,7 +47,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
-          .register(`/serviceWorker.js?id=${id}`)
+          .register(`/serviceWorker.js?id=${id}`, { scope: '.' });
       })
     }
 
