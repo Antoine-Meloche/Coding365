@@ -5,31 +5,25 @@ const parameters = new URLSearchParams(queryString);
 const id = parameters.get('id');
 
 let assets = [
-  "/new",
+  `/new?id=${id}`,
   `/schedules?id=${id}`,
-  `serviceWorker.js?id=${id}`
+  `/serviceWorker.js?id=${id}`,
+  'favicon.svg',
+  'manifest.json'
 ]
 
-fetch(`/image-paths?id=${id}`).then(res => res.json()).then(data => {
-  assets = assets.concat(data)
-})
-
 self.addEventListener('install', installEvent => {
+  fetch(`/image-paths?id=${id}`).then(res => res.json()).then(data => {
+    assets = assets.concat(data)
+  })
+
   installEvent.waitUntil(
     caches.open(staticSchedulesWebsite).then(cache => {
       cache.addAll(assets)
-        .catch(err => console.log('failed to register service worker'))
+        .catch(_err => console.log('failed to register service worker'))
     })
   )
 })
-
-//self.addEventListener('fetch', fetchEvent => {
-//  fetchEvent.respondWith(
-//    caches.match(fetchEvent.request).then(res => {
-//      return res || fetch(fetchEvent.request)
-//    })
-//  )
-//})
 
 self.addEventListener("fetch", (e) => {
   e.respondWith(
@@ -40,10 +34,11 @@ self.addEventListener("fetch", (e) => {
         return r;
       }
       const response = await fetch(e.request);
-      const cache = await caches.open(cacheName);
+      const cache = await caches.open(staticSchedulesWebsite);
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
     })()
   );
 });
+

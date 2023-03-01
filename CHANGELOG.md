@@ -313,3 +313,6 @@
 ## Day 95
 *SchedulesWebsite* - Work on using the PWA offline (still not working)
 
+## Day 96
+*SchedulesWebsite* - Fixed offline caching and retrieving
+
