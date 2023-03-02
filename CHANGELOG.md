@@ -316,3 +316,6 @@
 ## Day 96
 *SchedulesWebsite* - Fixed offline caching and retrieving
 
+## Day 97
+*SchedulesWebsite* - Offline not fixed, need to change system from using an id as a query param
+

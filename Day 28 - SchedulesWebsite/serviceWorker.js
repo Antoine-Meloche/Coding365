@@ -1,4 +1,4 @@
-const staticSchedulesWebsite = "schedules-website-v1"
+const staticSchedulesWebsite = "schedules-website-v3"
 
 const queryString = location.search;
 const parameters = new URLSearchParams(queryString);

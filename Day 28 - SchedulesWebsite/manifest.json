@@ -1,7 +1,6 @@
 {
   "name": "Schedules Website",
   "short_name": "SchedulesWebsite",
-  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#242424",
   "orientation": "portrait-primary",
