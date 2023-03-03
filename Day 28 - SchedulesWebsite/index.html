@@ -44,10 +44,20 @@
     const parameters = new URLSearchParams(queryString);
     const id = parameters.get('id');
 
-    if ("serviceWorker" in navigator) {
+    if ("serviceWorker" in navigator | true) {
       window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register(`/serviceWorker.js?id=${id}`, { scope: '.' });
+        fetch('/manifest.json')
+          .then(response => response.json())
+          .then(manifest => {
+            manifest.start_url = `new?id=${id}`;
+            const updatedManifest = JSON.stringify(manifest);
+            const blob = new Blob([updatedManifest], { type: 'application/json' });
+            const manifestBlobUrl = URL.createObjectURL(blob);
+            const link = document.querySelector('link[rel="manifest"]');
+            link.href = manifestBlobUrl;
+            navigator.serviceWorker
+              .register(`/serviceWorker.js?id=${id}`, { scope: '.', manifest: manifestBlobUrl });
+          })
       })
     }
 

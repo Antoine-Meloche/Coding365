@@ -2,6 +2,7 @@
   "name": "Schedules Website",
   "short_name": "SchedulesWebsite",
   "display": "standalone",
+  "start_url": "/new",
   "background_color": "#242424",
   "orientation": "portrait-primary",
   "theme_color": "#242424",

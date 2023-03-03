@@ -319,3 +319,6 @@
 ## Day 97
 *SchedulesWebsite* - Offline not fixed, need to change system from using an id as a query param
 
+## Day 98
+*SchedulesWebsite* - Offline still not fixed, tried adding the query param in the start url, but was invalid
+
