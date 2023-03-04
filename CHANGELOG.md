@@ -322,3 +322,6 @@
 ## Day 98
 *SchedulesWebsite* - Offline still not fixed, tried adding the query param in the start url, but was invalid
 
+## Day 99
+*SchedulesWebsite* - Offline still not working, trying to figure out if cookies can be accessed from service worker
+

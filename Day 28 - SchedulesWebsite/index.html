@@ -7,57 +7,36 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#242424">
     <link rel="apple-touch-icon" href="/calendar.png">
+    <link rel="stylesheet" href="static/index.css">
     <meta name="description" content="A website displaying the schedules of selected people to help with coordination of events throughout the day">
   </head>
   <body>
     <ul>
     </ul>
   </body>
-  <style>
-    body{
-      font-family: Arial, Helvetica, 'sans-serif';
-      background-color: #242424;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      font-size: 5vw;
-      color: white
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 3vw;
-      display: flex;
-      flex-direction: column;
-      gap: 1vw;
-    }
-
-    a {
-      color: white
-    }
-  </style>
   <script>
+    const getCookie = (name) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
     const queryString = window.location.search;
     const parameters = new URLSearchParams(queryString);
-    const id = parameters.get('id');
+    const URLid = parameters.get('id');
+    let id;
+
+    if (URLid === null) {
+      id = getCookie("id");
+    } else {
+      document.cookie = `id=${id}; expires=Fri, 1 Jan 2100 12:00:00 UTC; SameSite=Lax`;
+      id = URLid
+    }
 
     if ("serviceWorker" in navigator | true) {
       window.addEventListener("load", () => {
-        fetch('/manifest.json')
-          .then(response => response.json())
-          .then(manifest => {
-            manifest.start_url = `new?id=${id}`;
-            const updatedManifest = JSON.stringify(manifest);
-            const blob = new Blob([updatedManifest], { type: 'application/json' });
-            const manifestBlobUrl = URL.createObjectURL(blob);
-            const link = document.querySelector('link[rel="manifest"]');
-            link.href = manifestBlobUrl;
-            navigator.serviceWorker
-              .register(`/serviceWorker.js?id=${id}`, { scope: '.', manifest: manifestBlobUrl });
-          })
+        navigator.serviceWorker
+          .register(`/serviceWorker.js?id=${id}`, { scope: '.' });
       })
     }
 
@@ -95,23 +74,23 @@
           endTimeStr = `${endTimeHours}h${endTimeMinutes < 10 ? '0' : ''}${endTimeMinutes}`;
 
           if ((endTimeHours > currentTime.getHours() | (endTimeHours == currentTime.getHours() & endTimeMinutes > currentTime.getMinutes())) & (startTimeHours < currentTime.getHours() | (startTimeHours == currentTime.getHours() & startTimeMinutes <= currentTime.getMinutes()))) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🔴: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🔴</a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
             break;
           }
 
           if (startTimeMinutes+startTimeHours*60-5 <= currentTime.getMinutes()+currentTime.getHours()*60 & endTimeInt > currentTime.getHours()*60+currentTime.getMinutes()) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🟠: ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}`;
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟠</a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
             break;
           }
 
           if (endTimeInt > currentTime.getMinutes()+currentTime.getHours()*60) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🟢: ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}`;
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}</p>`;
             break;
           }
         }
 
         if (person_li.innerHTML == "") {
-          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name}</a> 🟢: Done for the day`;
+          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> Done for the day</p>`;
         }
 
         ul.appendChild(person_li);

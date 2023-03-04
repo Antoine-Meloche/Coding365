@@ -5,9 +5,9 @@ const parameters = new URLSearchParams(queryString);
 const id = parameters.get('id');
 
 let assets = [
-  `/new?id=${id}`,
-  `/schedules?id=${id}`,
-  `/serviceWorker.js?id=${id}`,
+  `/new`,
+  `/schedules`,
+  `/serviceWorker.js`,
   'favicon.svg',
   'manifest.json'
 ]
