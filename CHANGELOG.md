@@ -325,3 +325,6 @@
 ## Day 99
 *SchedulesWebsite* - Offline still not working, trying to figure out if cookies can be accessed from service worker
 
+## Day 100
+*SchedulesWebsite* - Offline still having problems with cookies, css sending to client fixed
+

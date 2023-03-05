@@ -127,9 +127,14 @@ def get_favicon():
     return send_file("favicon.svg", mimetype="image/svg+xml")
 
 
-@app.route("favicon.ico", methods=["GET", "POST"])
+@app.route("/favicon.ico", methods=["GET", "POST"])
 def get_favicon_ico():
     return send_file("favicon.ico", mimetype="image/x-icon")
+
+
+@app.route('/static/index.css', methods=["GET", "POST"])
+def get_stylesheet():
+    return send_file("static/index.css", mimetype="text/css")
 
 
 @app.route("/image-paths", methods=["GET"])
