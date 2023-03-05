@@ -328,3 +328,6 @@
 ## Day 100
 *SchedulesWebsite* - Offline still having problems with cookies, css sending to client fixed
 
+## Day 101
+*SchedulesWebsite* - No work on offline, slight UI chnages
+

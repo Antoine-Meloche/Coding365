@@ -90,7 +90,8 @@
         }
 
         if (person_li.innerHTML == "") {
-          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> Done for the day</p>`;
+          // person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> Done for the day</p>`;
+          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a>`;
         }
 
         ul.appendChild(person_li);
