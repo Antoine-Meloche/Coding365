@@ -331,3 +331,5 @@
 ## Day 101
 *SchedulesWebsite* - No work on offline, slight UI chnages
 
+## Day 102
+*SchedulesWebsite* - No work on offline, more UI tweaking (probably last revision of the UI)

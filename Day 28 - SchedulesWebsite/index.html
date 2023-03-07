@@ -73,25 +73,26 @@
           endTimeMinutes = endTimeInt - endTimeHours*60;
           endTimeStr = `${endTimeHours}h${endTimeMinutes < 10 ? '0' : ''}${endTimeMinutes}`;
 
+          currentTimeInt = currentTime.getMinutes()+currentTime.getHours()*60;
+
           if ((endTimeHours > currentTime.getHours() | (endTimeHours == currentTime.getHours() & endTimeMinutes > currentTime.getMinutes())) & (startTimeHours < currentTime.getHours() | (startTimeHours == currentTime.getHours() & startTimeMinutes <= currentTime.getMinutes()))) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🔴</a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} <i class="red"></i></a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
             break;
           }
 
-          if (startTimeMinutes+startTimeHours*60-5 <= currentTime.getMinutes()+currentTime.getHours()*60 & endTimeInt > currentTime.getHours()*60+currentTime.getMinutes()) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟠</a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
+          if (startTimeMinutes+startTimeHours*60-5 <= currentTimeInt & endTimeInt > currentTimeInt) {
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} <i class="yellow"></i></a><p> ${event} - ${schedules[name][day][event]['room']} until ${endTimeStr}</p>`;
             break;
           }
 
-          if (endTimeInt > currentTime.getMinutes()+currentTime.getHours()*60) {
-            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}</p>`;
+          if (endTimeInt > currentTimeInt) {
+            person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} <i class="green"></i></a><p> ${event} - ${schedules[name][day][event]['room']} at ${schedules[name][day][event]['start']}</p>`;
             break;
           }
         }
 
         if (person_li.innerHTML == "") {
-          // person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a><p> Done for the day</p>`;
-          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} 🟢</a>`;
+          person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} <i class="green"></i></a>`;
         }
 
         ul.appendChild(person_li);

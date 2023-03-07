@@ -10,13 +10,10 @@ ul {
   padding: 0;
   margin: 3vw;
   display: flex;
-  /* gap: 2vw; */
-  /* flex-direction: column; */
   gap: 5vw;
   row-gap: 2vw;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 li {
@@ -51,6 +48,7 @@ a {
   color: white;
   z-index: 10;
   text-decoration: none;
+  display: flex;
 }
 
 a::after {
@@ -69,3 +67,24 @@ a::after {
   border-radius: 50rem;
 }
 
+i {
+  display: inline-block;
+  place-self: center;
+  margin-left: 2.5rem;
+  margin-top: -.25vw;
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 100rem;
+}
+
+i.green {
+  background-color: #55ff55;
+}
+
+i.red {
+  background-color: #ff5555;
+}
+
+i.yellow {
+  background-color: #ffff55;  
+}
