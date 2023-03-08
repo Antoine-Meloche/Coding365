@@ -29,14 +29,14 @@
     if (URLid === null) {
       id = getCookie("id");
     } else {
+      id = URLid;
       document.cookie = `id=${id}; expires=Fri, 1 Jan 2100 12:00:00 UTC; SameSite=Lax`;
-      id = URLid
     }
 
     if ("serviceWorker" in navigator | true) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
-          .register(`/serviceWorker.js?id=${id}`, { scope: '.' });
+          .register(`/serviceWorker.js`, { scope: '.' });
       })
     }
 

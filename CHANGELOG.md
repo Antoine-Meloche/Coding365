@@ -333,3 +333,6 @@
 
 ## Day 102
 *SchedulesWebsite* - No work on offline, more UI tweaking (probably last revision of the UI)
+
+## Day 103
+*SchedulesWebsite* - Offline working, fix to UI with margin being in rem instead of vw
