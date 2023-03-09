@@ -28,9 +28,18 @@
 
     if (URLid === null) {
       id = getCookie("id");
+      if (!URLid.match(/^(\d|\w){32}$/) {
+        id = undefined;
+      }
     } else {
-      id = URLid;
-      document.cookie = `id=${id}; expires=Fri, 1 Jan 2100 12:00:00 UTC; SameSite=Lax`;
+      if (URLid.match(/^(\d|\w){32}$/)) {
+        id = URLid;
+        document.cookie = `id=${id}; expires=Fri, 1 Jan 2100 12:00:00 UTC; SameSite=Lax`;
+      } else {
+        id = undefined;
+        URLid = undefined;
+        console.error('Invalid id');
+      }
     }
 
     if ("serviceWorker" in navigator | true) {

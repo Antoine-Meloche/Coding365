@@ -340,3 +340,6 @@
 ## Day 104
 *PFFPFP* - New line generation algorithm using opensimplex noise
 
+## Day 105
+*SchedulesWebsite* - Patched a bug allowing client side cross site scripting
+
