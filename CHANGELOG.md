@@ -343,3 +343,6 @@
 ## Day 105
 *SchedulesWebsite* - Patched a bug allowing client side cross site scripting
 
+## Day 106
+*EasyCSS* - Added a first option (non-functional) and setup the basic structure for the program
+
