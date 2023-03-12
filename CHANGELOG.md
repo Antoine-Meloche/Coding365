@@ -346,3 +346,6 @@
 ## Day 106
 *EasyCSS* - Added a first option (non-functional) and setup the basic structure for the program
 
+## Day 107
+*FiGUI* - Start on translating [yagudaev/figma-to-json](https://github.com/yagudaev/figma-to-json) to python
+
