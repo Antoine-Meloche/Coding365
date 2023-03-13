@@ -349,3 +349,6 @@
 ## Day 107
 *FiGUI* - Start on translating [yagudaev/figma-to-json](https://github.com/yagudaev/figma-to-json) to python
 
+## Day 108
+*FiGUI* - Stuck on translation of inflateRaw, will try again tomorrow if not will try to find a workaround
+
