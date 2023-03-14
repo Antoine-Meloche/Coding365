@@ -19,12 +19,16 @@ ul {
 li {
   font-size: 4vw;
   color: white;
+  display:  inline-flex;
+  height: 5vw;
+  position: relative;
 }
 
 p {
   display: inline;
-  position: relative;
   z-index: 5;
+  margin-left: 1vw;
+  margin-top: 0vw;
 }
 
 p::before {
@@ -34,12 +38,12 @@ p::before {
   position: absolute;
   z-index: -1;
   top: -.5vw;
-  left: -5vw;
+  left: -1vw;
   background-color: #484848;
   padding-top: .5vw;
   padding-bottom: .3vw;
-  padding-left: 5vw;
-  padding-right: 2vw;
+  padding-left: 3vw;
+  padding-right: 0vw;
   border-radius: 50rem;
 }
 

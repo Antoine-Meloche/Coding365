@@ -2,7 +2,6 @@ import zlib
 import array
 import zipfile
 import io
-import gzip
 
 
 int32 = array.array('i', [0])
@@ -37,12 +36,12 @@ def fig_to_binary_parts(file_buffer):
     file_byte = bytearray(file_buffer)
 
     if not file_byte.startswith(b"fig-kiwi"):
-        #unzipped = zipfile.ZipFile(io.BytesIO(file_buffer))
-        #file_buffer = unzipped.read("canvas.fig")
+        unzipped = zipfile.ZipFile(io.BytesIO(file_buffer))
+        file_buffer = unzipped.read("canvas.fig")
 
-        unzipped = gzip.decompress(file_buffer)
-        file = unzipped["canvas.fig"]
-        file_buffer = file["buffer"]
+        #unzipped = zlib.decompress(file_buffer, -15)
+        #file = unzipped["canvas.fig"]
+        #file_buffer = file["buffer"]
         file_byte = bytearray(file_buffer)
 
     start = 8
@@ -58,8 +57,8 @@ def fig_to_binary_parts(file_buffer):
         byte_temp = file_byte[start:start+end]
 
         if file_byte[start] != 137 and file_byte[start + 1] == 80:
-            #byte_temp = zlib.decompress(byte_temp)
-            byte_temp = zipfile.ZipFile(io.BytesIO(byte_temp)).read()
+            byte_temp = zlib.decompress(byte_temp, -15)
+            #byte_temp = zipfile.ZipFile(io.BytesIO(byte_temp)).read()
 
         result.append(byte_temp)
         start += end

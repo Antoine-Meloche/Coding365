@@ -352,3 +352,6 @@
 ## Day 108
 *FiGUI* - Stuck on translation of inflateRaw, will try again tomorrow if not will try to find a workaround
 
+## Day 109
+*SchedulesWebsite* - Fix for styling when the events have longer names
+
