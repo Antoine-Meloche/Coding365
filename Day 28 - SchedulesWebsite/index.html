@@ -11,7 +11,9 @@
     <meta name="description" content="A website displaying the schedules of selected people to help with coordination of events throughout the day">
   </head>
   <body>
-    <ul>
+    <ul class="not-done">
+    </ul>
+    <ul class="done">
     </ul>
   </body>
   <script>
@@ -55,7 +57,8 @@
       updateTime();
     });
 
-    const ul = document.querySelector('ul');
+    const ul = document.querySelector('ul.not-done');
+    const doneUl = document.querySelector('ul.done');
 
     var currentTime;
 
@@ -102,9 +105,10 @@
 
         if (person_li.innerHTML == "") {
           person_li.innerHTML = `<a href="${name}.png?id=${id}">${name} <i class="green"></i></a>`;
+          doneUl.appendChild(person_li);
+        } else {
+          ul.appendChild(person_li);          
         }
-
-        ul.appendChild(person_li);
       }
     }
   </script>

@@ -1,4 +1,4 @@
-const staticSchedulesWebsite = "schedules-website-v3"
+const staticSchedulesWebsite = "schedules-website-v5"
 
 let assets = [
   `/new`,

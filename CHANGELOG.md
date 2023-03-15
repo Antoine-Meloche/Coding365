@@ -355,3 +355,6 @@
 ## Day 109
 *SchedulesWebsite* - Fix for styling when the events have longer names
 
+## Day 110
+*SchedulesWebsite* - Changed favicon.ico and putting people who are done for the day at the bottom
+
