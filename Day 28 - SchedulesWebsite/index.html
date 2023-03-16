@@ -30,11 +30,11 @@
 
     if (URLid === null) {
       id = getCookie("id");
-      if (!URLid.match(/^(\d|\w){32}$/) {
+      if (!URLid.match(/^(\d|\w)+$/) {
         id = undefined;
       }
     } else {
-      if (URLid.match(/^(\d|\w){32}$/)) {
+      if (URLid.match(/^(\d|\w)+$/)) {
         id = URLid;
         document.cookie = `id=${id}; expires=Fri, 1 Jan 2100 12:00:00 UTC; SameSite=Lax`;
       } else {
@@ -71,6 +71,8 @@
 
     function updateUI() {
       ul.innerHTML = "";
+      doneUl.innerHTML = "";
+
       for (var name of Object.keys(schedules)) {
         var day = currentTime.getDay();
 

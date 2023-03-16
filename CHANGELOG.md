@@ -358,3 +358,6 @@
 ## Day 110
 *SchedulesWebsite* - Changed favicon.ico and putting people who are done for the day at the bottom
 
+## Day 111
+*SchedulesWebsite* - Fixed id checking and duplication of people who are done for the day
+
