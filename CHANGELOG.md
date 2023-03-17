@@ -361,3 +361,6 @@
 ## Day 111
 *SchedulesWebsite* - Fixed id checking and duplication of people who are done for the day
 
+## Day 112
+*FiGUI* - More trying to make the decompression work
+

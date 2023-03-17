@@ -44,23 +44,22 @@ def fig_to_binary_parts(file_buffer):
         #file_buffer = file["buffer"]
         file_byte = bytearray(file_buffer)
 
-    start = 8
-    
-    calc_end(file_byte, start)
-    start += 4
+    start = 16
 
     result = []
-    while start < len(file_byte):
-        end = calc_end(file_byte, start)
-        start += 4
+    #while start < len(file_byte):
+    #    end = calc_end(file_byte, start)
+    #    start += 4
+    #
+    #    byte_temp = file_byte[start:start+end]
+    #
+    #    if file_byte[start] != 137 and file_byte[start + 1] == 80:
+    #        byte_temp = zlib.decompress(byte_temp, -15)
+    #        #byte_temp = zipfile.ZipFile(io.BytesIO(byte_temp)).read()
+    #
+    #    result.append(byte_temp)
+    #    start += end
 
-        byte_temp = file_byte[start:start+end]
-
-        if file_byte[start] != 137 and file_byte[start + 1] == 80:
-            byte_temp = zlib.decompress(byte_temp, -15)
-            #byte_temp = zipfile.ZipFile(io.BytesIO(byte_temp)).read()
-
-        result.append(byte_temp)
-        start += end
+    result.append(zlib.decompress(file_byte, -15))
 
     return result
