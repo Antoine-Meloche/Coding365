@@ -367,3 +367,6 @@
 ## Day 113
 *PicoCTF* - PicoCTF challenges 
 
+## Day 114
+*UHack* - [UHack 2023](https://www.peso-outaouais.ca/en/evenement/uhack-2023/)
+
