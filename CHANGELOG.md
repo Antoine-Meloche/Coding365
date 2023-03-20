@@ -370,3 +370,5 @@
 ## Day 114
 *UHack* - [UHack 2023](https://www.peso-outaouais.ca/en/evenement/uhack-2023/)
 
+## Day 115
+*UHack* - [UHack 2023](https://www.peso-outaouais.ca/en/evenement/uhack-2023/)
