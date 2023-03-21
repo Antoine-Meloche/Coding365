@@ -372,3 +372,7 @@
 
 ## Day 115
 *UHack* - [UHack 2023](https://www.peso-outaouais.ca/en/evenement/uhack-2023/)
+
+## Day 116
+*UHack* - Continuation of work on small fix for the final version of our UHack submission
+
