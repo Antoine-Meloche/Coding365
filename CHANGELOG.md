@@ -374,5 +374,8 @@
 *UHack* - [UHack 2023](https://www.peso-outaouais.ca/en/evenement/uhack-2023/)
 
 ## Day 116
-*UHack* - Continuation of work on small fix for the final version of our UHack submission
+*Solution Michu* - Continuation of work on small fix for the final version of our UHack submission
+
+## Day 117
+*Solution Michu* - Work on bon de travail
 
