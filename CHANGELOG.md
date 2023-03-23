@@ -379,3 +379,5 @@
 ## Day 117
 *Solution Michu* - Work on bon de travail
 
+## Day 118
+*Solution Michu* - Work on bon de travail
