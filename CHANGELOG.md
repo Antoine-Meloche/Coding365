@@ -384,3 +384,6 @@
 
 ## Day 119
 *Solution Michu* - Almost done with xlsx for bon de travail
+
+## Day 120
+*Solution Michu* - Finished xlsx for bon de travail 
