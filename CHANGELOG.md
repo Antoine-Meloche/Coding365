@@ -390,3 +390,6 @@
 
 ## Day 121
 *ULCTF* - ULCTF challenges
+
+## Day 122
+*ULCTF* - ULCTF challenges
