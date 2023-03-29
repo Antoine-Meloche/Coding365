@@ -396,3 +396,6 @@
 
 ## Day 123
 *Solution Michu* - Start on migration to sqlite
+
+## Day 124
+*Solution Michu* - Migrated towards SQLite for /ajouter
