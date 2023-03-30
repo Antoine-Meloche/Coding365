@@ -398,4 +398,8 @@
 *Solution Michu* - Start on migration to sqlite
 
 ## Day 124
-*Solution Michu* - Migrated towards SQLite for /ajouter
+*Solution Michu* - Migrated towards SQLite /ajouter
+
+## Day 125
+*Solution Michu* - Migrated towards SQLite /modifier
+
