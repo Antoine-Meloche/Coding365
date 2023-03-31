@@ -403,3 +403,5 @@
 ## Day 125
 *Solution Michu* - Migrated towards SQLite /modifier
 
+## Day 126
+*Solution Michu* - Migrated towards SQLite /supprimer
