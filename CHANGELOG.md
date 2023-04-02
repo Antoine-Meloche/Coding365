@@ -408,3 +408,6 @@
 
 ## Day 127
 *Solution Michu* - Migrated towards SQLite /get-all
+
+## Day 128
+*Solution Michu* - Removed unecessary /get & /modifier on_close fix
