@@ -411,3 +411,6 @@
 
 ## Day 128
 *Solution Michu* - Removed unecessary /get & /modifier on_close fix
+
+## Day 129
+*Solution Michu* -  Maps link update when ticket is no longer in work stage
