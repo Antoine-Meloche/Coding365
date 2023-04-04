@@ -414,3 +414,6 @@
 
 ## Day 129
 *Solution Michu* -  Maps link update when ticket is no longer in work stage
+
+## Day 130
+*Solution Michu* - Work on improving the visual and Accessibility of the web pages
