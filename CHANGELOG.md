@@ -420,3 +420,8 @@
 
 ## Day 131
 *Solution Michu* - Work on improving the visual and Accessibility of the web pages
+
+# Day 131
+*Solution Michu* - Work on improving visual 
+
+
