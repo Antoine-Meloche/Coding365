@@ -427,3 +427,5 @@
 ## Day 133
 *Solution Michu* - Minor improvements to styling
 
+## Day 134
+*Solution Michu* - Minor styling to admin.html
