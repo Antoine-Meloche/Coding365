@@ -429,3 +429,6 @@
 
 ## Day 134
 *Solution Michu* - Minor styling to admin.html
+
+## Day 135
+*Solution Michu* - Styling & python fixes
