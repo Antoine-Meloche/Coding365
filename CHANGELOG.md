@@ -432,3 +432,6 @@
 
 ## Day 135
 *Solution Michu* - Styling & python fixes
+
+## Day 136
+*RustLicenser* - An application to add a license and copyright notices if applicable to codebases. Hosted at this [github repo](https://github.com/Antoine-Meloche/RustLicenser).
