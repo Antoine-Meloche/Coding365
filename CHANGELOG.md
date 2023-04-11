@@ -435,3 +435,6 @@
 
 ## Day 136
 *RustLicenser* - An application to add a license and copyright notices if applicable to codebases. Hosted at this [github repo](https://github.com/Antoine-Meloche/RustLicenser).
+
+## Day 137
+*Solution Michu* - Move towards open-sourcing
