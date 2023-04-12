@@ -438,3 +438,6 @@
 
 ## Day 137
 *Solution Michu* - Move towards open-sourcing
+
+## Day 138
+*RustLicenser* - Work on adding the folder dialog
