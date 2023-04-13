@@ -441,3 +441,6 @@
 
 ## Day 138
 *RustLicenser* - Work on adding the folder dialog
+
+## Day 139
+*Solution Michu* - Open sourced the project https://github.com/Adem-et-ses-serveurs/Solution-Michu
