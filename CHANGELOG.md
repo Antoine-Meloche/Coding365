@@ -444,5 +444,9 @@
 
 ## Day 139
 *Solution Michu* - Open sourced the project https://github.com/Adem-et-ses-serveurs/Solution-Michu
+
 ## Day 140
 *RustLicenser* - Added file list from folder
+
+## Day 141
+*Solution Michu* - Work on improving security of the system
