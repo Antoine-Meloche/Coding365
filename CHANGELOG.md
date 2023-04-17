@@ -454,3 +454,5 @@
 ## Day 142
 *Solution Michu* - Work on improving security of the system
 
+## Day 143
+*PiKey* - Start on project to turn rasperry pi pico W into a bad usb
