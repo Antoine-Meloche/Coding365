@@ -456,3 +456,6 @@
 
 ## Day 143
 *PiKey* - Start on project to turn rasperry pi pico W into a bad usb
+
+## Day 144
+*pico-ducky* - Working on improvements to pico-ducky
