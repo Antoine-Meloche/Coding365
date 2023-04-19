@@ -459,3 +459,6 @@
 
 ## Day 144
 *pico-ducky* - Working on improvements to pico-ducky
+
+## Day 145
+*pico-ducky* - Researching HID based OS detection
