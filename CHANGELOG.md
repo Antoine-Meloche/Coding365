@@ -464,4 +464,7 @@
 *pico-ducky* - Researching HID based OS detection
 
 ## Day 146
-*pico-ducky* - implemented active windows detection 
+*pico-ducky* - Implemented active windows detection
+
+## Day 147
+*pico-ducky* - Researching MacOS and Linux detection using HID
