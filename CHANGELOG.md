@@ -468,3 +468,6 @@
 
 ## Day 147
 *pico-ducky* - Researching MacOS and Linux detection using HID
+
+## Day 148
+*PiKey* - Work on a raspberry pi pico hat for the PiKey
