@@ -455,7 +455,7 @@
 *Solution Michu* - Work on improving security of the system
 
 ## Day 143
-*PiKey* - Start on project to turn rasperry pi pico W into a bad usb
+*Pi-Key* - Start on project to turn rasperry pi pico W into a bad usb
 
 ## Day 144
 *pico-ducky* - Working on improvements to pico-ducky
@@ -470,4 +470,7 @@
 *pico-ducky* - Researching MacOS and Linux detection using HID
 
 ## Day 148
-*PiKey* - Work on a raspberry pi pico hat for the PiKey
+*Pi-Key* - Work on a raspberry pi pico hat for the PiKey
+
+## Day 149
+*Pi-Key* - Started Pi-Key Blocks, a visual programming interface for duckyscript
