@@ -474,3 +474,6 @@
 
 ## Day 149
 *Pi-Key* - Started Pi-Key Blocks, a visual programming interface for duckyscript
+
+## Day 150
+*Pi-Key* - Work on Pi-Key Blocks, adding comments, modifiers, keys and f keys
