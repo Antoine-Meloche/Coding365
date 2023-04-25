@@ -477,3 +477,6 @@
 
 ## Day 150
 *Pi-Key* - Work on Pi-Key Blocks, adding comments, modifiers, keys and f keys
+
+## Day 151
+*pico-ducky* - Work on adding if statements
