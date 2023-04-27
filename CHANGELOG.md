@@ -483,3 +483,6 @@
 
 ## Day 152
 *pico-ducky* - Added microSD reader and changed switches for PCB
+
+## Day 153
+*pico-ducky* - More work on if statements 
