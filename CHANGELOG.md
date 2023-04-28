@@ -486,3 +486,6 @@
 
 ## Day 153
 *pico-ducky* - More work on if statements 
+
+## Day 154
+*pico-ducky* - Second draft for if statements
