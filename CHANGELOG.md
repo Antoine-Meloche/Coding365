@@ -492,3 +492,6 @@
 
 ## Day 155
 *pico-ducky* - Third draft for if statements
+
+## Day 156
+*pico-ducky* - IF statement condition checker draft
