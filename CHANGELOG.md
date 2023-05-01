@@ -495,3 +495,6 @@
 
 ## Day 156
 *pico-ducky* - IF statement condition checker draft
+
+## Day 157
+*Pi-Key* - Research for Pi-Key Blocks on creating a custom generator
