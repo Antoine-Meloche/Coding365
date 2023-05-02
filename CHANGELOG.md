@@ -498,3 +498,6 @@
 
 ## Day 157
 *Pi-Key* - Research for Pi-Key Blocks on creating a custom generator
+
+## Day 158
+*Pi-Key* - Start on custom generator for Pi-Key Blocks
