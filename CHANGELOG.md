@@ -501,3 +501,6 @@
 
 ## Day 158
 *Pi-Key* - Start on custom generator for Pi-Key Blocks
+
+## Day 159
+*Pi-Key* - Pi-Key Blocks, added features and fixed bugs
