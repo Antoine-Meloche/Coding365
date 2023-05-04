@@ -504,3 +504,6 @@
 
 ## Day 159
 *Pi-Key* - Pi-Key Blocks, added features and fixed bugs
+
+## Day 160
+*Pi-Key* - Pi-Key Blocks, added letters and f keys, fix exporting pressed keys
