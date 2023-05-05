@@ -506,4 +506,7 @@
 *Pi-Key* - Pi-Key Blocks, added features and fixed bugs
 
 ## Day 160
-*Pi-Key* - Pi-Key Blocks, added letters and f keys, fix exporting pressed keys
+*Pi-Key* - Pi-Key Blo
+cks, added letters and f keys, fix exporting pressed keys
+## Day 161
+*Unnamed* - Work on setting up my latex environment and note templates 
