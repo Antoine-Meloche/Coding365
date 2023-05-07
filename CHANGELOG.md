@@ -512,4 +512,7 @@
 *Unnamed* - Work on setting up my latex environment and note templates 
 
 ## Day 162
-*Unnamed* - Finished setting up my latex environment and note templates 
+*Unnamed* - Finished setting up my latex environment and note templates
+
+## Day 163
+*pico-ducky* - Added variables and variable check in if
