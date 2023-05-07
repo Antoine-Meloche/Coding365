@@ -516,3 +516,6 @@
 
 ## Day 163
 *pico-ducky* - Added variables and variable check in if
+
+## Day 164
+*pico-ducky* - Added constants
