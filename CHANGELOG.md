@@ -519,3 +519,6 @@
 
 ## Day 164
 *pico-ducky* - Added constants
+
+## Day 165
+*pico-ducky* - Added functions, while loops and formatted code
