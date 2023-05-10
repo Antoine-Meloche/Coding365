@@ -522,3 +522,7 @@
 
 ## Day 165
 *pico-ducky* - Added functions, while loops and formatted code
+
+## Day 166
+*pico-ducky* - Added STRINGLN, removed unecessary IF code
+
