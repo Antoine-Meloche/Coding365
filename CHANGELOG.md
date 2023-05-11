@@ -526,3 +526,5 @@
 ## Day 166
 *pico-ducky* - Added STRINGLN, removed unecessary IF code
 
+## Day 167
+*pico-ducky* - Added caps lock check for OS detection
