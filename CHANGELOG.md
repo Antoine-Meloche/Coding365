@@ -528,3 +528,6 @@
 
 ## Day 167
 *pico-ducky* - Added caps lock check for OS detection
+
+## Day 168
+*pico-ducky* -  Added REM_BLOCK, WIFI, CONNECT_WIFI, ATTACKMODE
