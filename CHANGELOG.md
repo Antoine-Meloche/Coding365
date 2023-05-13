@@ -531,3 +531,7 @@
 
 ## Day 168
 *pico-ducky* -  Added REM_BLOCK, WIFI, CONNECT_WIFI, ATTACKMODE
+
+## Day 169
+
+*pico-ducky* - Research about adding support for PID, VID, etc
