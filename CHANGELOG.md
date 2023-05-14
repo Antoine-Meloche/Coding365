@@ -535,3 +535,7 @@
 ## Day 169
 
 *pico-ducky* - Research about adding support for PID, VID, etc
+
+## Day 170
+
+*pico-ducky* - Research about adding support for PID, VID, etc
