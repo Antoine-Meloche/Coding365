@@ -537,5 +537,7 @@
 *pico-ducky* - Research about adding support for PID, VID, etc
 
 ## Day 170
-
 *pico-ducky* - Research about adding support for PID, VID, etc
+
+## Day 171
+*pico-ducky* - start on work on usb_hid for PID and VID
