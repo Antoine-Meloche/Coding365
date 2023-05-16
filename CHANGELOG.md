@@ -533,7 +533,6 @@
 *pico-ducky* -  Added REM_BLOCK, WIFI, CONNECT_WIFI, ATTACKMODE
 
 ## Day 169
-
 *pico-ducky* - Research about adding support for PID, VID, etc
 
 ## Day 170
@@ -541,3 +540,6 @@
 
 ## Day 171
 *pico-ducky* - start on work on usb_hid for PID and VID
+
+## Day 172
+*pico-ducky* - Start on new code interpreter for DuckyScript
