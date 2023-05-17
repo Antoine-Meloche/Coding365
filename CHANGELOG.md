@@ -543,3 +543,6 @@
 
 ## Day 172
 *pico-ducky* - Start on new code interpreter for DuckyScript
+
+## Day 173
+*pico-ducky* - Work on new code interpreter for DuckyScript
