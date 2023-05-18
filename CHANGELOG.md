@@ -546,3 +546,6 @@
 
 ## Day 173
 *pico-ducky* - Work on new code interpreter for DuckyScript
+
+## Day 174
+*ShortcutButton* - Start on updates to GNOME 44
