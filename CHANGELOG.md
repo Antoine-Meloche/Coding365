@@ -551,4 +551,7 @@
 *ShortcutButton* - Start on updates to GNOME 44
 
 ## Day 175
-*ShortcutButton* - Work on adding new buttons 
+*ShortcutButton* - Work on adding new buttons
+
+## Day 176
+*ShortcutButton* - More work on adding new buttons and saved commands
