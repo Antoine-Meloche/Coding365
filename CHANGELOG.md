@@ -558,3 +558,6 @@
 
 ## Day 177
 *ShortcutButton* -  More work on adding buttons and commands
+
+## Day 178
+*ShortcutButton* - Work on icon chooser
