@@ -561,3 +561,6 @@
 
 ## Day 178
 *ShortcutButton* - Work on icon chooser
+
+## Day 179
+*ShortcutButton* - Fixed icons and added back command entry
