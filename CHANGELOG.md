@@ -564,3 +564,6 @@
 
 ## Day 179
 *ShortcutButton* - Fixed icons and added back command entry
+
+## Day 180
+*ShortcutButton* - Add button functionality 
