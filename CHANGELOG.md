@@ -566,4 +566,7 @@
 *ShortcutButton* - Fixed icons and added back command entry
 
 ## Day 180
-*ShortcutButton* - Add button functionality 
+*ShortcutButton* - Add button functionality
+
+## Day 181
+*ShortcutButton* - More work for adding buttons to panel
