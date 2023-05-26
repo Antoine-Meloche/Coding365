@@ -570,3 +570,6 @@
 
 ## Day 181
 *ShortcutButton* - More work for adding buttons to panel
+
+## Day 182
+*pico-ducky* - Research for integrated nmap-like port scanning
