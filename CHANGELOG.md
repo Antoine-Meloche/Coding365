@@ -573,3 +573,6 @@
 
 ## Day 182
 *pico-ducky* - Research for integrated nmap-like port scanning
+
+## Day 183
+*pico-ducky* - Basic port scanning
