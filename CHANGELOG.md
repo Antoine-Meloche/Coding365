@@ -588,3 +588,6 @@
 
 ## Day 187
 *CodinGame Spring Challenge 2023* - Worked on the Spring Challenge (code to be released after closing of the challenge)
+
+## Day 188
+*CodinGame Spring Challenge 2023* - Worked on the Spring Challenge (code to be released after closing of the challenge)
