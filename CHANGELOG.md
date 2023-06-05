@@ -600,3 +600,6 @@
 
 ## Day 191
 *CodinGame Spring Challenge 2023* - Worked on the Spring Challenge (code to be released after closing of the challenge)
+
+## Day 192
+*CodinGame Spring Challenge 2023* - Worked on the Spring Challenge (code to be released after closing of the challenge)
