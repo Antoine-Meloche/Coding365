@@ -609,3 +609,6 @@
 
 ## Day 194
 *pico-ducky* - Added port selection for port scanning
+
+## Day 195
+*ShortcutButton* - Research for adding buttons to panel or making the shortcut buttons a drop down list in the panel
