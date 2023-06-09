@@ -612,3 +612,6 @@
 
 ## Day 195
 *ShortcutButton* - Research for adding buttons to panel or making the shortcut buttons a drop down list in the panel
+
+## Day 196
+*ShortcutButton* - Tried to add dropdown menu, problem with indicator overlap
