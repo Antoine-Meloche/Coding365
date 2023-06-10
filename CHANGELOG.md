@@ -615,3 +615,6 @@
 
 ## Day 196
 *ShortcutButton* - Tried to add dropdown menu, problem with indicator overlap
+
+## Day 197
+*ShortcutButton* - Dropdown working - needs updates when changed commands and icons
