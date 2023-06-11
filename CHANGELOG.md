@@ -618,3 +618,6 @@
 
 ## Day 197
 *ShortcutButton* - Dropdown working - needs updates when changed commands and icons
+
+## Day 198
+*pico-ducky* - Web UI for port scanning
