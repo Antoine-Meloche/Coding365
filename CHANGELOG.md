@@ -621,3 +621,6 @@
 
 ## Day 198
 *pico-ducky* - Web UI for port scanning
+
+## Day 199
+*pico-ducky* - Styling for web UI
