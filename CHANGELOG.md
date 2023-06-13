@@ -624,3 +624,7 @@
 
 ## Day 199
 *pico-ducky* - Styling for web UI
+
+## Day 200
+*pico-ducky* - Styling for the rest of the web UI
+
