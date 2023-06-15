@@ -630,3 +630,7 @@
 
 ## Day 201
 *pico-ducky* - Even more styling for the web UI
+
+## Day 202
+
+*Mainsail* - Some modifications to current mainsail install 
