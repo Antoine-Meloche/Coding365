@@ -632,5 +632,7 @@
 *pico-ducky* - Even more styling for the web UI
 
 ## Day 202
-
 *Mainsail* - Some modifications to current mainsail install 
+
+## Day 203
+*Unnamed* - Start on my first web3 project
