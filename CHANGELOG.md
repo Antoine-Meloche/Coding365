@@ -636,3 +636,6 @@
 
 ## Day 203
 *Unnamed* - Start on my first web3 project
+
+## Day 204
+*Unnamed* - Work on my first web3 project and started work on a website to make cool infill like designs with stls
