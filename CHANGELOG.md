@@ -648,3 +648,6 @@
 
 ## Day 207
 *Unnamed* - Work on my first web3 project
+
+## Day 208
+*OpenSCAD project* - Started a basic openscad project to learn the coding language 
