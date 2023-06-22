@@ -651,3 +651,6 @@
 
 ## Day 208
 *OpenSCAD project* - Started a basic openscad project to learn the coding language 
+
+## Day 209
+*OpenSCAD project* - More learning
