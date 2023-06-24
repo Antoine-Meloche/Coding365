@@ -657,3 +657,6 @@
 
 ## Day 210
 *OpenSCAD project* - Finished my first design and started on a second
+
+## Day 211
+*OpenSCAD project* - Polished my first design and continued my second
