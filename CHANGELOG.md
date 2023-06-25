@@ -662,4 +662,7 @@
 *OpenSCAD project* - Polished my first design and continued my second
 
 ## Day 212
-*MacroPad* - Working on a project for a macropad made with a raspberry pi pico 
+*MacroPad* - Working on a project for a macropad made with a raspberry pi pico
+
+## Day 213
+*MacroPad* - Working on a project for a macropad made with a raspberry pi pico
