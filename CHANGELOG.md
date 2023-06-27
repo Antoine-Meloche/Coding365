@@ -666,3 +666,6 @@
 
 ## Day 213
 *MacroPad* - Working on a project for a macropad made with a raspberry pi pico
+
+## Day 214
+*Macropad* - Some final touches
