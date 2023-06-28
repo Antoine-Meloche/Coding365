@@ -669,3 +669,6 @@
 
 ## Day 214
 *Macropad* - Some final touches
+
+## Day 215
+*Macropad* - Start on client side app
