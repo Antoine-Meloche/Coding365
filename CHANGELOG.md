@@ -675,3 +675,6 @@
 
 ## Day 216
 *Check n' ✓* - Building a multiple use attributed check list web app
+
+## Day 217
+*Check n' ✓* - Work on distribution of templates
