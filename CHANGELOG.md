@@ -678,3 +678,6 @@
 
 ## Day 217
 *Check n' ✓* - Work on distribution of templates
+
+## Day 218
+*Check n' ✓* - Restart using Sveltekit, DaisyUI and Firebase
