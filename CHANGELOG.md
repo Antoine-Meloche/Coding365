@@ -681,3 +681,6 @@
 
 ## Day 218
 *Check n' ✓* - Restart using Sveltekit, DaisyUI and Firebase
+
+## Day 219
+*Check n' ✓* - Continuing rewrite
