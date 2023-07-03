@@ -684,3 +684,6 @@
 
 ## Day 219
 *Check n' ✓* - Continuing rewrite
+
+## Day 220
+*Check n' ✓* - Work on permissions and authentication
