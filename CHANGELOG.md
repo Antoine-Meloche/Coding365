@@ -8,6 +8,11 @@
 
 *RustCommit* - Git application made in rust with tauri
 
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+ <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+ <Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/>
+ <Default Extension="png" ContentType="image/png"/>
+</Types>
 ## Day 3
 
 *RustCommit*
@@ -686,4 +691,7 @@
 *Check n' ✓* - Continuing rewrite
 
 ## Day 220
+*Check n' ✓* - Work on permissions and authentication
+
+## Day 221
 *Check n' ✓* - Work on permissions and authentication
