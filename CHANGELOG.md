@@ -695,3 +695,6 @@
 
 ## Day 221
 *Check n' ✓* - Work on permissions and authentication
+
+## Day 222
+*Check n' ✓* - Work on attribution 
