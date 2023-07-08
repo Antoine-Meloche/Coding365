@@ -704,3 +704,6 @@
 
 ## Day 224
 *Check n' ✓* - Work on organizations 
+
+## Day 225
+*Davis WeatherLink API helper* -  Started working on a Davis WeatherLink API helper
