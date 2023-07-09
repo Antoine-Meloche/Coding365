@@ -707,3 +707,6 @@
 
 ## Day 225
 *Davis WeatherLink API helper* -  Started working on a Davis WeatherLink API helper
+
+## Day 226
+*Macropad* - Work on integrating weather apis into the client
