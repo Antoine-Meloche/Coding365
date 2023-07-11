@@ -713,3 +713,6 @@
 
 ## Day 227
 *Macropad* - Finished integrating weather apis into the client
+
+## Day 228
+*Unnamed* - Work on a new projects website
