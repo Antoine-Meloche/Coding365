@@ -8,11 +8,6 @@
 
 *RustCommit* - Git application made in rust with tauri
 
-<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
- <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
- <Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/>
- <Default Extension="png" ContentType="image/png"/>
-</Types>
 ## Day 3
 
 *RustCommit*
@@ -724,4 +719,7 @@
 *Unnamed* - Work on a new projects website
 
 ## Day 231
+*Unnamed* - Work on a new projects website
+
+## Day 232
 *Unnamed* - Work on a new projects website
