@@ -729,3 +729,6 @@
 
 ## Day 233
 *ListenPass Checker* - Work on ListenPass Checker still missing qr code scan with camera
+
+## Day 234
+*ListenPass Checker* - Fixed mobile view
