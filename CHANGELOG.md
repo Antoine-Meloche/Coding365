@@ -732,3 +732,6 @@
 
 ## Day 234
 *ListenPass Checker* - Fixed mobile view
+
+## Day 235
+*Unnamed* - Work on a new projects website
