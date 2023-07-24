@@ -747,3 +747,6 @@
 
 ## Day 239
 *Unnamed* - Work on a new projects website
+
+## Day 240
+*Weather Notif* - Started on an ionic weather application that will have custom notifications for certain weather conditions
