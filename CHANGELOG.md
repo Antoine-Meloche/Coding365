@@ -750,3 +750,7 @@
 
 ## Day 240
 *Weather Notif* - Started on an ionic weather application that will have custom notifications for certain weather conditions
+
+## Day 241
+*Weather Notif* - Worked on an ionic weather application that will have custom notifications for certain weather conditions
+
