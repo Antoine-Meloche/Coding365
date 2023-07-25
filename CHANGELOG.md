@@ -710,19 +710,19 @@
 *Macropad* - Finished integrating weather apis into the client
 
 ## Day 228
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 229
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 230
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 231
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 232
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 233
 *ListenPass Checker* - Start on a website to check Listenbourg passports
@@ -734,23 +734,26 @@
 *ListenPass Checker* - Fixed mobile view
 
 ## Day 235
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 236
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 237
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 238
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 239
-*Unnamed* - Work on a new projects website
+*Unnamed* - Work on a new project's website
 
 ## Day 240
 *Weather Notif* - Started on an ionic weather application that will have custom notifications for certain weather conditions
 
 ## Day 241
 *Weather Notif* - Worked on an ionic weather application that will have custom notifications for certain weather conditions
+
+## Day 242
+*Unnamed* - Work on a new project's website
 
