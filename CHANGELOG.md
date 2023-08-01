@@ -770,5 +770,9 @@
 *Unnamed* - Work on a new project's website
 
 ## Day 247
+*OpenSCAD* - Playing around with OpenSCAD to create shells of objects
+
+## Day 248
 *Unnamed* - Work on a new project's website
+
 
