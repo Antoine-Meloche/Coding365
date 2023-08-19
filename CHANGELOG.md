@@ -825,3 +825,6 @@
 
 ## Day 265
 *Unnamed* - Work on a new project's website
+
+## Day 266
+*Unnamed* - Work on a new project's website
