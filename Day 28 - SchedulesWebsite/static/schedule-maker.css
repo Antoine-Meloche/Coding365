@@ -16,6 +16,7 @@ html > * {
     .fc-event-time
   ) {
   background: #242424 !important;
+  font-weight: bold !important;
 }
 
 .fc-event-main,
@@ -25,6 +26,7 @@ html > * {
 .fc-event-title,
 .fc-event-time {
   background: none !important;
+  color: black !important;
 }
 
 * {
@@ -35,7 +37,8 @@ html > * {
 .save-btn,
 .event-name-input,
 .event-color-input,
-.event-room-input {
+.event-room-input,
+.save-name-input {
   position: absolute;
   top: 1rem;
   right: 10rem;
@@ -115,6 +118,7 @@ html > * {
   position: relative !important;
   outline: 1px solid white;
   outline-offset: -1px;
+  padding-inline: 1rem !important;
 }
 
 .fc-col-header-cell::before {

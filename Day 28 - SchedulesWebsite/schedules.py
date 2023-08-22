@@ -137,6 +137,16 @@ def get_stylesheet():
     return send_file("static/index.css", mimetype="text/css")
 
 
+@app.route('/maker', methods=["GET", "POST"])
+def get_maker():
+    return send_file("schedule-maker.html", mimetype="text/html")
+
+
+@app.route('/static/schedule-maker.css', methods=["GET", "POST"])
+def get_maker_stylesheet():
+    return send_file("static/schedule-maker.css", mimetype="text/css")
+
+
 @app.route("/image-paths", methods=["GET"])
 def get_image_paths():
     try:

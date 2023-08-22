@@ -834,3 +834,6 @@
 
 ## Day 268
 *Unnamed* - Work on a new project's website
+
+## Day 269
+*SchedulesWebsite* - Couple changes to schedule maker
