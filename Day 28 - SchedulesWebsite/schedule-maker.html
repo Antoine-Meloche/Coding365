@@ -137,18 +137,18 @@
 
         events = calendar.getEvents();
         eventsOut = {
-            "0": [],
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
+            "0": {},
+            "1": {},
+            "2": {},
+            "3": {},
+            "4": {},
+            "5": {},
+            "6": {},
         }
 
         for (var i = 0; i < events.length; i++) {
             var event = events[i];
-            eventsOut[event._instance.range.start.getDay()].push(`${event._def.title}": {"start": "${moment(event._instance.range.start).add(5, 'hours').format("H[h]mm")}","duration": ${(event._instance.range.end - event._instance.range.start) / 60000},"room": "${event._def.extendedProps.roomNumber}}`)
+            eventsOut[event._instance.range.start.getDay().toString()][event._def.title] = {"start": moment(event._instance.range.start).add(4, 'hours').format('H[h]mm').toString(), "duration": (event._instance.range.end - event._instance.range.start) / 60000, "room": event._def.extendedProps.roomNumber.toString()};
         }
 
         domtoimage.toJpeg(document.querySelector('.fc-view-harness'), { quality: 0.95 }).then((dataUrl) => {

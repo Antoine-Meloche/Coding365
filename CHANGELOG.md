@@ -837,3 +837,6 @@
 
 ## Day 269
 *SchedulesWebsite* - Couple changes to schedule maker
+
+## Day 270
+*SchedulesWebsite* - Changed the generation of the json file to be better suited for the use in the schedules website
