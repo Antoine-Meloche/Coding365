@@ -840,3 +840,6 @@
 
 ## Day 270
 *SchedulesWebsite* - Changed the generation of the json file to be better suited for the use in the schedules website
+
+## Day 271
+*NoName* - Start on a new android app for bus transit (name in progress)
