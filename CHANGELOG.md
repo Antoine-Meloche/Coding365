@@ -849,3 +849,7 @@
 
 ## Day 273
 *NoName* - Start on a new android app for bus transit (name in progress)
+
+## Day 274
+*NoName* - Continued work on android app for bus transit (still no name yet)
+
