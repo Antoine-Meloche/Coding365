@@ -877,3 +877,6 @@
 ## Day 282
 *NoName* - Continued work on android app for bus transit (still no name yet)
 
+## Day 283
+*Insecure-Password-Download* - A rust web application made to practice bypassing badly protected password based downloads
+
