@@ -883,3 +883,6 @@
 ## Day 284
 *Insecure-Password-Download* - More work with a partially working prototype of the application
 
+## Day 285
+*Insecure-Password-Download* - Almost completely done for the first prototype
+
