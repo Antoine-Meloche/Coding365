@@ -880,3 +880,6 @@
 ## Day 283
 *Insecure-Password-Download* - A rust web application made to practice bypassing badly protected password based downloads
 
+## Day 284
+*Insecure-Password-Download* - More work with a partially working prototype of the application
+
