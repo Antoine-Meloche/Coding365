@@ -889,3 +889,6 @@
 ## Day 286
 *Insecure-Password-Download* - Finished first prototype, working on making some challenges for the different password levels
 
+## Day 287
+*Insecure-Password-Download* - Finished the challenges in the different levels for passwords
+
