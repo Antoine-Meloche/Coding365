@@ -892,3 +892,6 @@
 ## Day 287
 *Insecure-Password-Download* - Finished the challenges in the different levels for passwords
 
+## Day 288
+*NoName* - Continued work on bus transit app
+
