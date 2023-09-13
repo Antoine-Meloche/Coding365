@@ -901,3 +901,5 @@
 ## Day 290
 *NoName* - Continued work on bus transit app
 
+## Day 291
+*Bun Shortener* - A URL shortener written in javascript with [bun](bun.sh)
