@@ -903,3 +903,6 @@
 
 ## Day 291
 *Bun Shortener* - A URL shortener written in javascript with [bun](bun.sh)
+
+## Day 292
+*concealPy* - A primitive Python obfuscator written in C
