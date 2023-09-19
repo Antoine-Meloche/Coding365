@@ -918,3 +918,6 @@
 
 ## Day 296
 *concealPy* - A primitive Python obfuscator written in C
+
+## Day 297
+*concealPy* - A primitive Python obfuscator written in C
