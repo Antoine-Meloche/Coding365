@@ -921,3 +921,6 @@
 
 ## Day 297
 *concealPy* - A primitive Python obfuscator written in C
+
+## Day 298
+*picoCTF* - Binary exploit creation
