@@ -924,3 +924,6 @@
 
 ## Day 298
 *picoCTF* - Binary exploit creation
+
+## Day 299
+*concealPy* - More work on the Python obfuscator
