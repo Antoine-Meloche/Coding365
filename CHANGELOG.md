@@ -927,3 +927,7 @@
 
 ## Day 299
 *concealPy* - More work on the Python obfuscator
+
+## Day 300
+*concealPy* - More work on the Python obfuscator
+
