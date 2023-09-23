@@ -934,3 +934,6 @@
 ## Day 301
 *concealPy* - More work on the Python obfuscator
 
+## Day 302
+*concealPy* - Almost ready for 1.0.0
+
