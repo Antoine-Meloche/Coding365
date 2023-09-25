@@ -937,3 +937,5 @@
 ## Day 302
 *concealPy* - Almost ready for 1.0.0
 
+## Day 303
+*concealPy* - Still couple of bugs to fix before initial release
