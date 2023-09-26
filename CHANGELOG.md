@@ -939,3 +939,6 @@
 
 ## Day 303
 *concealPy* - Still couple of bugs to fix before initial release
+
+## Day 304
+*concealPy* - Pushing release a bit to improve some more
