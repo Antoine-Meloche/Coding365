@@ -942,3 +942,6 @@
 
 ## Day 304
 *concealPy* - Pushing release a bit to improve some more
+
+## Day 305
+*concealPy* - Pushing release a bit to improve some more
