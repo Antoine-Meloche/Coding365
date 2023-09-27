@@ -944,4 +944,8 @@
 *concealPy* - Pushing release a bit to improve some more
 
 ## Day 305
-*concealPy* - Pushing release a bit to improve some more
+*concealPy* - Pushing release a bit to improve some more (Abandonned, unsatisfied with the results)
+
+## Day 306
+*pico-ducky* - Working on passive OS detection some more
+
