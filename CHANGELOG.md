@@ -951,3 +951,6 @@
 
 ## Day 307
 *pico-ducky* - Working on passive OS detection some more
+
+## Day 308
+*pico-ducky* - Project dropped in favor of an LLVM rewrite for the raspberry pi pico, started today
