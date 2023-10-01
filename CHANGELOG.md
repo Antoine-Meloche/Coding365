@@ -954,3 +954,6 @@
 
 ## Day 308
 *pico-ducky* - Project dropped in favor of an LLVM rewrite for the raspberry pi pico, started today
+
+## Day 309
+*PiKey* - pivot towards new language for badusb
