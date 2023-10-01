@@ -957,3 +957,7 @@
 
 ## Day 309
 *PiKey* - pivot towards new language for badusb
+
+## Day 310
+*PiKey* - Continued work on writing this new language
+
