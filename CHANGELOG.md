@@ -961,3 +961,6 @@
 ## Day 310
 *PiKey* - Continued work on writing this new language
 
+## Day 311
+*PiKey* - More work on creating the language
+
