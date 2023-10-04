@@ -964,3 +964,6 @@
 ## Day 311
 *PiKey* - More work on creating the language
 
+## Day 312
+*PiKey* - Started on the python transpiler for the raspberry pi pico 
+
