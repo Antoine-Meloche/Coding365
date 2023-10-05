@@ -967,3 +967,6 @@
 ## Day 312
 *PiKey* - Started on the python transpiler for the raspberry pi pico 
 
+## Day 313
+*PiKey* - Added more features to the rpi pico transpiler
+
