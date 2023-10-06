@@ -970,3 +970,6 @@
 ## Day 313
 *PiKey* - Added more features to the rpi pico transpiler
 
+## Day 314
+*PiKey* - Fixed issue with case of booleans on output when setting variables
+
