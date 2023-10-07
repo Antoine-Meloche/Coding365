@@ -973,3 +973,6 @@
 ## Day 314
 *PiKey* - Fixed issue with case of booleans on output when setting variables
 
+## Day 315
+*PiKey* - Worked on adding if statements
+
