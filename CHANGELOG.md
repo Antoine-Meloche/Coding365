@@ -979,3 +979,6 @@
 ## Day 316
 *PiKey* - More work on if statements
 
+## Day 317
+*PiKey* - Added builtin functions 
+
