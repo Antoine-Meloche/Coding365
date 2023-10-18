@@ -1,6 +1,4 @@
-nums
-nums
-nums# Coding365 Changelog
+# Coding365 Changelog
 
 ## Day 1
 
@@ -1007,3 +1005,6 @@ nums# Coding365 Changelog
 
 ## Day 325
 *PiKey* - More work on python version for prototyping
+
+## Day 326
+*NoName* - Developing project idea for future 
