@@ -1026,3 +1026,6 @@
 
 ## Day 332
 *transcompyler* - transcompyler extremely close to initial release
+
+## Day 233
+*transcompyler* - final touches for initial release
