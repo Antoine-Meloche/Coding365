@@ -1032,3 +1032,6 @@
 
 ## Day 234
 *transcompyler* - last minute fix before release
+
+## Day 235
+*NoName* - Created a simple website for fun
