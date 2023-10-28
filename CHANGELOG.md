@@ -1038,3 +1038,7 @@
 
 ## Day 236
 *NoName* - Worked on my simple website for fun
+
+## Day 237
+*NoName* - Worked on another app to keep up coding
+
