@@ -1035,3 +1035,6 @@
 
 ## Day 235
 *NoName* - Created a simple website for fun
+
+## Day 236
+*NoName* - Worked on my simple website for fun
