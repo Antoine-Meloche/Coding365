@@ -1096,3 +1096,6 @@
 ## Day 355
 *Unnamed* - Continuing new semi major project
 
+## Day 356
+*gitbucket-dracula-theme* - Started creating a dracula theme for gitbucket
+
