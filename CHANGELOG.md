@@ -1099,3 +1099,6 @@
 ## Day 356
 *gitbucket-dracula-theme* - Started creating a dracula theme for gitbucket
 
+## Day 357
+*gitbucket-dracula-theme* - Started creating a dracula theme for gitbucket
+
