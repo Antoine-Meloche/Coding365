@@ -1114,3 +1114,6 @@
 ## Day 361
 *rsmdtohtml* - creating a custom markdown to html translator for my blog
 
+## Day 362
+*rsmdtohtml* - finished my basic implementation of a markdown to html translator for my blog
+
