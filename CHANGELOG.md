@@ -1117,3 +1117,5 @@
 ## Day 362
 *rsmdtohtml* - finished my basic implementation of a markdown to html translator for my blog
 
+## Day 363
+*Unnamed* - Continuing new semi major project
