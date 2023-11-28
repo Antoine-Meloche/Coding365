@@ -1129,4 +1129,6 @@
 ## Day 366
 *Unnamed* - Continuing new semi major project
 
+## Day 367 (365 consecutive)
+*Blog* - Working on quick blog written in Elixir
 
