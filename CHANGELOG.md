@@ -1132,3 +1132,6 @@
 ## Day 367 (365 consecutive)
 *Blog* - Working on quick blog written in Elixir
 
+## Day 368
+*Blog* - More work on Elixir blog
+
