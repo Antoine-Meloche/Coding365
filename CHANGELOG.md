@@ -1135,3 +1135,6 @@
 ## Day 368
 *Blog* - More work on Elixir blog
 
+## Day 369
+*Blog* - Almost done with the Elixir blog
+
