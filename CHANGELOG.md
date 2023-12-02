@@ -1141,3 +1141,6 @@
 ## Day 370
 *Blog* - Couple of improvements left to Elixir blog
 
+## Day 371
+*Blog* - Fixed HTML rendering bug
+
