@@ -1144,3 +1144,6 @@
 ## Day 371
 *Blog* - Fixed HTML rendering bug
 
+## Day 372
+*Advent-of-Code* - Day 2
+
