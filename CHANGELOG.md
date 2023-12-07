@@ -1156,3 +1156,6 @@
 ## Day 375
 *Advent-of-Code* - Day 5
 
+## Day 376
+*Advent-of-Code* - Day 6
+
