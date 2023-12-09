@@ -1162,3 +1162,6 @@
 ## Day 377
 *Advent-of-Code* - Day 7
 
+## Day 378
+*Advent-of-Code* - Day 8
+
