@@ -1168,3 +1168,6 @@
 ## Day 379
 *Advent-of-Code* - Day 9
 
+## Day 380
+*Advent-of-Code* - Day 10
+
