@@ -1174,3 +1174,6 @@
 ## Day 381
 *Advent-of-Code* - Day 11
 
+## Day 382
+*Advent-of-Code* - Day 12
+
