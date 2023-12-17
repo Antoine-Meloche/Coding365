@@ -1186,3 +1186,6 @@
 ## Day 385
 *Advent-of-Code* - Day 15
 
+## Day 386
+*Advent-of-Code* - Day 16
+
