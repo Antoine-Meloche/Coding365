@@ -1192,3 +1192,6 @@
 ## Day 387
 *Advent-of-Code* - Day 17
 
+## Day 388
+*Advent-of-Code* - Day 18
+
