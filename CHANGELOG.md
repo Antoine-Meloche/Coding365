@@ -1204,3 +1204,6 @@
 ## Day 391
 *Advent-of-Code* - Day 21
 
+## Day 392
+*Advent-of-Code* - Day 22
+
