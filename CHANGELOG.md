@@ -1213,3 +1213,6 @@
 ## Day 394
 *Advent-of-Code* - Day 24
 
+## Day 395
+*Advent-of-Code* - Day 25
+
