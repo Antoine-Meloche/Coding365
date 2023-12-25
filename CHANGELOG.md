@@ -1210,3 +1210,6 @@
 ## Day 393
 *Advent-of-Code* - Day 23
 
+## Day 394
+*Advent-of-Code* - Day 24
+
