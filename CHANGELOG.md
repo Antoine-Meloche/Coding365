@@ -1216,3 +1216,6 @@
 ## Day 395
 *Advent-of-Code* - Day 25
 
+## Day 396
+*PiKey* - adding hid features for pico w
+
