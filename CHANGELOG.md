@@ -1228,3 +1228,6 @@
 ## Day 399
 *PiKey* - adding hid features for pico w
 
+## Day 400
+*PiKey* - adding hid features for pico w
+
